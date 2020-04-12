@@ -1,3 +1,10 @@
+---
+description: A list of my 2020 articles
+meta:
+  - name: keywords
+    content: 2020 articles blogposts
+---
+
 # 2020
 
 The coronavirus year... and the year I started this "blog"

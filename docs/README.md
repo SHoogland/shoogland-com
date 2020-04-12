@@ -1,6 +1,19 @@
-# About Me
+---
+description: A little bit about me and what I do
+meta:
+  - name: keywords
+    content: stephan hoogland about
+  - name: og:title
+    content: Stephan Hoogland
+  - name: og:type
+    content: article
+  - name: og:image
+    content: https://www.shoogland.com/img/me.png
+  - name: og:url
+    content: https://www.shoogland.com
+---
 
-Stephan Hoogland
+# Stephan Hoogland
 
 That's me, a humble and epic backend developer, who can not seem to get interested in frontend code (css and everything that has to do with styling), hence the default vuepress theme site you are looking at right now.
 

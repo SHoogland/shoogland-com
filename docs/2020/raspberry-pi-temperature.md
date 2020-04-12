@@ -1,3 +1,10 @@
+---
+description: A guide for using a raspberrypi as a smart thermometer
+meta:
+  - name: keywords
+    content: raspberrypi thermometer smarthome
+---
+
 # Raspberry Pi Temperature
 Code to upload the measured temp on a raspberry pi to firebase
 

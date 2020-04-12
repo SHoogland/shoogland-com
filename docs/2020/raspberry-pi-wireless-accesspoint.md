@@ -1,3 +1,10 @@
+---
+description: A guide for using a raspberrypi as a wireless access point
+meta:
+  - name: keywords
+    content: raspberrypi wireless accesspoint
+---
+
 # Raspberry Pi as a wireless access point
 
 download pi raspbian img

@@ -1,3 +1,10 @@
+---
+description: A log of the steps taken to set up an elk stack on digital ocean
+meta:
+  - name: keywords
+    content: elasticsearch kibana elkstack
+---
+
 # The ELK stack
 
 https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-18-04
