@@ -3,13 +3,13 @@ description: A little bit about me and what I do
 meta:
   - name: keywords
     content: stephan hoogland about
-  - name: og:title
+  - property: og:title
     content: Stephan Hoogland
-  - name: og:type
+  - property: og:type
     content: article
-  - name: og:image
+  - property: og:image
     content: https://www.shoogland.com/img/me.png
-  - name: og:url
+  - property: og:url
     content: https://www.shoogland.com
 ---
 
