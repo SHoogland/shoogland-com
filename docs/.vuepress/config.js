@@ -2,7 +2,8 @@ module.exports = {
 	title: 'Stephan Hoogland',
 	description: 'Professional Backend Developer',
 	head: [
-		['link', { rel: 'icon', href: '/favicon.png' }]
+		['link', { rel: 'icon', href: '/favicon.png' }],
+		['meta', { name: 'author', content: 'Stephan Hoogland'}]
 	],
 	themeConfig: {
 		repo: 'shoogland/shoogland-com',
