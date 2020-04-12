@@ -1,0 +1,15 @@
+# netlify.toml
+CI = 1
+NPM_FLAGS = "--no-optional"
+
+[build]
+  publish = "docs/.vuepress/dist"
+
+[context.production]
+  command = "npm run build"
+
+[context.deploy-preview]
+  command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build"

@@ -1,0 +1,16 @@
+{
+  "name": "shoogland-com",
+  "version": "1.0.0",
+  "description": "Another blogging attempt",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "dist": "vuepress build docs"
+},
+  "author": "Stephan Hoogland <stephan@shoogland.com>",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "vuepress": "^1.4.0"
+  }
+}
