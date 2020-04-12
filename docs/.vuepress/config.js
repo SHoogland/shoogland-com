@@ -16,7 +16,7 @@ module.exports = {
 	},
 	plugins: {
 		'sitemap': {
-			hostname: 'https://shoogland.com'
+			hostname: 'https://www.shoogland.com'
 		},
 	}
 }
