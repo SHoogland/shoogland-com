@@ -27,3 +27,8 @@ I like to create a fire every now and then, this was a rather big one...
 
 ![My Motor](./assets/my-motor.jpg)
 I drive to work on this piece of art (Yamaha FZ1 2011)
+
+<a rel="ar" href="/ar/my-home.usdz">
+	<img src="./assets/my-home.png">
+</a>
+I recently bought a home and drew it in sketchup
