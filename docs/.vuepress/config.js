@@ -9,6 +9,14 @@ module.exports = {
 		editLinks: true,
 		docsDir: 'docs',
 		lastUpdated: 'Last Updated',
-		editLinkText: 'Edit this page on GitHub'
+		editLinkText: 'Edit this page on GitHub',
+		sidebar: [
+			'/2020/'
+		]
+	},
+	plugins: {
+		'sitemap': {
+			hostname: 'https://shoogland.com'
+		},
 	}
 }

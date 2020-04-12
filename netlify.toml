@@ -6,10 +6,10 @@ NPM_FLAGS = "--no-optional"
   publish = "docs/.vuepress/dist"
 
 [context.production]
-  command = "npm run build"
+  command = "npm run dist"
 
 [context.deploy-preview]
-  command = "npm run build"
+  command = "npm run dist"
 
 [context.branch-deploy]
-  command = "npm run build"
+  command = "npm run dist"

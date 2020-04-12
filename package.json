@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "dist": "vuepress build docs"
-},
+  },
   "author": "Stephan Hoogland <stephan@shoogland.com>",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "vuepress": "^1.4.0"
+    "vuepress": "^1.4.0",
+    "vuepress-plugin-sitemap": "^2.3.1"
   }
 }
