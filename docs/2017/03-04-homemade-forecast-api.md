@@ -154,3 +154,5 @@ Side note:
 ![Forecast sessions](../assets/2017/forecast-sessions.gif)
 
 I have the automated sign in running every hour to keep my access token fresh. But when I went to the Harvest ID security page, I noticed the ridiculous amount of sessions I created. Once we implement the code in the planning board I am probably turning the access token expire age to 18 hours instead of 60 days, so there will never be more than 18 active sessions.
+
+<disqus />

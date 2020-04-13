@@ -67,3 +67,5 @@ add `dtoverlay=w1-gpio`
 run with crontab for example 
 
 - run with: `node index.mjs --experimental-modules [domain] [location] [sensor-address]`
+
+<disqus />

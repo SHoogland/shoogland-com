@@ -260,3 +260,5 @@ on another host filebeat setup
 - `apt-get update`
 - `apt-get install elasticsearch-curator`
 - `curator_cli delete_indices --filter_list '{"filtertype":"age","source":"creation_date","direction":"older","unit":"days","unit_count":45}'`
+
+<disqus />

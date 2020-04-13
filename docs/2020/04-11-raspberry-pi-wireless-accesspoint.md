@@ -85,3 +85,5 @@ post-down brctl delbr br0
 sudo reboot
 
 the pi reboots and bridges the access point connections to the ethernet interface making wifi clients appear as ethernet clients on the network
+
+<disqus />
