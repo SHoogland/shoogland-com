@@ -29,7 +29,7 @@ export default {
 				reload: true,
 				config: function () {
 					this.page.identifier = self.$page.key;
-					this.page.url = `https://www.shoogland.com/${self.$page.regularPath}`;
+					this.page.url = `https://www.shoogland.com${self.$page.regularPath}`;
 					this.page.title = self.$page.title;
 					this.language = 'en';
 				}
