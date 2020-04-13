@@ -19,5 +19,8 @@ module.exports = {
 		'sitemap': {
 			hostname: 'https://www.shoogland.com'
 		},
+		'@vuepress/google-analytics': {
+			'ga': 'UA-54040031-1'
+		}
 	}
 }
