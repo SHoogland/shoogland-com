@@ -1,8 +1,13 @@
 ---
 description: A guide for using a raspberrypi as a wireless access point
+date: 2020-04-11T12:00:00+0000
+
 meta:
   - name: keywords
     content: raspberrypi wireless accesspoint
+
+feed:
+  enable: true
 ---
 
 # Raspberry Pi as a wireless access point

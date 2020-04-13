@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "vuepress": "^1.4.0",
+    "vuepress-plugin-feed": "^0.1.8",
     "vuepress-plugin-sitemap": "^2.3.1"
   }
 }

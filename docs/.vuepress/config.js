@@ -1,3 +1,5 @@
+const url = 'https://www.shoogland.com'
+
 module.exports = {
 	title: 'Stephan Hoogland',
 	description: 'Professional Backend Developer',
@@ -18,10 +20,22 @@ module.exports = {
 	},
 	plugins: {
 		'sitemap': {
-			hostname: 'https://www.shoogland.com'
+			hostname: url
 		},
 		'@vuepress/google-analytics': {
 			'ga': 'UA-54040031-1'
+		},
+		'feed': {
+			canonical_base: url,
+			feed_options: {
+				author: {
+					name: "Stephan Hoogland",
+					email: "stephan@shoogland.com",
+					link: url
+				}
+			},
+			count: 100,
+			sort: entries => entries.reverse()
 		}
 	}
 }

@@ -12,7 +12,7 @@ The coronavirus year... and the year I started this "blog"
 ### This years "articles":
 
 #### April
-- [RaspberryPi as Wireless Access Point](./raspberry-pi-wireless-accesspoint.md)
-- [The ELK Stack](./the-elk-stack.md)
-- [RaspberryPi Temperature](./raspberry-pi-temperature.md)
-- [RaspberryPi Default Setup](./raspberry-pi-setup.md)
+- [The ELK Stack](./04-10-the-elk-stack.md)
+- [RaspberryPi as Wireless Access Point](./04-11-raspberry-pi-wireless-accesspoint.md)
+- [RaspberryPi Temperature](./04-12-raspberry-pi-temperature.md)
+- [RaspberryPi Default Setup](./04-13-raspberry-pi-setup.md)

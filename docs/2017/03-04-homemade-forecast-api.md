@@ -1,3 +1,15 @@
+---
+description: A homemade api to access forecastapp data
+date: 2017-03-04T12:00:00+0000
+
+meta:
+  - name: keywords
+    content: forecastapp harvest api automation
+
+feed:
+  enable: true
+---
+
 # Homemade forecast API
 
 So, we have our planning board here at Matise. Maurits wrote all about it in [his post](https://blog.matise.nl/our-planning-board-on-a-second-screen-ab072d6e28ed) almost a year ago. Now this works great, every day everyone is able to see what he has to do for that day. But every now and then, this happens:

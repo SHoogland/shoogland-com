@@ -1,8 +1,13 @@
 ---
 description: A log of the steps taken to set up an elk stack on digital ocean
+date: 2020-04-10T12:00:00+0000
+
 meta:
   - name: keywords
     content: elasticsearch kibana elkstack
+
+feed:
+  enable: true
 ---
 
 # The ELK stack

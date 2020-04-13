@@ -1,3 +1,15 @@
+---
+description: Default raspberry pi setup
+date: 2020-04-13T12:00:00+0000
+
+meta:
+  - name: keywords
+    content: 2020 articles blogposts raspberrypi
+
+feed:
+  enable: true
+---
+
 # RaspberryPi Default Setup
 Before I do anything with a raspberry pi, I prepare it with the following steps:
 
@@ -8,7 +20,7 @@ Before I do anything with a raspberry pi, I prepare it with the following steps:
 - add empty file with the name `ssh` to the sd card root (aka boot dir) to enable ssh
 - add `wpa_supplicant.conf` file with the wifi settings to enable wifi
 
-```conf
+```apacheconf
 country=NL # Your 2-digit country code
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 network={
