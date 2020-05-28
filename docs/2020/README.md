@@ -16,3 +16,4 @@ The coronavirus year... and the year I started this "blog"
 - [RaspberryPi as Wireless Access Point](./04-11-raspberry-pi-wireless-accesspoint.md)
 - [RaspberryPi Temperature](./04-12-raspberry-pi-temperature.md)
 - [RaspberryPi Default Setup](./04-13-raspberry-pi-setup.md)
+- [Example Apache proxy configuration](./05-28-apache-proxy-config.md)
