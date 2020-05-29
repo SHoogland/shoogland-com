@@ -15,7 +15,7 @@ feed:
 A configuration file to set up a proxy in front of another webserver
 
 
-```conf
+```apacheconf
 <IfModule mod_ssl.c>
 <VirtualHost *:443>
 	ServerAdmin serveradmin@domain.com
@@ -81,3 +81,5 @@ A configuration file to set up a proxy in front of another webserver
 </VirtualHost>
 </IfModule>
 ```
+
+<disqus />
