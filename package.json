@@ -10,7 +10,7 @@
   "author": "Stephan Hoogland <stephan@shoogland.com>",
   "license": "ISC",
   "dependencies": {
-    "@vuepress/plugin-google-analytics": "^1.5.1"
+    "@vuepress/plugin-google-analytics": "^1.5.2"
   },
   "devDependencies": {
     "vuepress": "^1.5.2",
