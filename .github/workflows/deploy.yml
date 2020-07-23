@@ -37,12 +37,12 @@ jobs:
         npm ci
         npm run dist
 
-    - uses: jakejarvis/s3-sync-action@master
-      with:
-        args: --delete
+    - name: deploy
+      run: aws s3 sync docs/.vuepress/dist s3://${{ secrets.AWS_S3_BUCKET }}/ --exclude "_redirects" --no-progress --delete
       env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'eu-west-2'
-        SOURCE_DIR: 'docs/.vuepress/dist'
+
+# aws s3 cp s3://mybucket/ s3://mybucket/ --recursive --metadata-directive REPLACE --expires 2034-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
+
