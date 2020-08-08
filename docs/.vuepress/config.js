@@ -16,7 +16,7 @@ module.exports = {
 		sidebar: [
 			'/2020/',
 			'/2017/',
-			'/2015'
+			'/2015/'
 		]
 	},
 	plugins: {
