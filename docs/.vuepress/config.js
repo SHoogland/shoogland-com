@@ -15,7 +15,8 @@ module.exports = {
 		editLinkText: 'Edit this page on GitHub',
 		sidebar: [
 			'/2020/',
-			'/2017/'
+			'/2017/',
+			'/2015'
 		]
 	},
 	plugins: {
