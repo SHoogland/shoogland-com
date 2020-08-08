@@ -24,3 +24,6 @@ The coronavirus year... and the year I started this "blog"
 #### June
 - [Cloudfront vs Netlify](./06-08-cloudfront-vs-netlify.md)
 - [Wordpress user function](./06-12-wordpress-user-function.md)
+
+#### August
+- [Raspberry pi with home assistant](./08-04-raspberry-pi-home-assistant.md)
