@@ -14,6 +14,7 @@ feed:
 
 ### Prerequisites
 - know how on how to port forward on your router, so the domain name connects to your pi
+- Forward port 80 (for certbot challenge) and port 443 (for the interface over ssl)
 
 ### Lets get started
 Start with a clean pi: [setup raspberry pi](./04-13-raspberry-pi-setup.md)
