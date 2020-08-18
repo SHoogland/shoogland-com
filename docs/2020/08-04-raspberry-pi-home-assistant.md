@@ -127,6 +127,8 @@ docker-compose run --rm --entrypoint "\
 
 If that succeeded uncomment the server part with listen 443 in proxy.conf
 
+Inspired by: [https://medium.com/@pentacent/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71](https://medium.com/@pentacent/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71)
+
 Profit!
 
 <disqus />
