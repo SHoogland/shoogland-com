@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Another blogging attempt",
   "main": "index.js",
+  "engines": {
+	"node": "^14"
+},
   "scripts": {
     "dev": "vuepress dev docs",
     "dist": "vuepress build docs"
