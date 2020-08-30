@@ -13,7 +13,7 @@
   "author": "Stephan Hoogland <stephan@shoogland.com>",
   "license": "ISC",
   "dependencies": {
-    "@vuepress/plugin-google-analytics": "^1.5.3"
+    "@vuepress/plugin-google-analytics": "^1.5.4"
   },
   "devDependencies": {
     "vuepress": "^1.5.4",
