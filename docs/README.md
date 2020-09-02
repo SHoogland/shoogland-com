@@ -27,9 +27,9 @@ This is my so called blog, I'm more and more writing down tech projects I try an
 
 ## Work
 
-I currently work for [Matise](https://matise.nl)
+I currently work for [Bravoure](https://bravoure.nl)
 
-![Matise Logo](./assets/matise.png)
+![Bravoure Logo](./assets/bravoure.svg)
 
 ## Hobbies
 
