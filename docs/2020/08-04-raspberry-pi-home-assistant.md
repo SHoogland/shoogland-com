@@ -131,9 +131,11 @@ Inspired by: [https://medium.com/@pentacent/nginx-and-lets-encrypt-with-docker-i
 
 ### update home assistant
 
-`sudo docker pull homeassistant/armhf-homeassistant:stable`
+`sudo docker-compose pull`
 
-`sudo docker-compose restart homeassistant`
+`sudo docker-compose stop`
+
+`sudo docker-compose up --force-recreate -d`
 
 Profit!
 
