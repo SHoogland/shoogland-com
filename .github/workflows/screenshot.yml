@@ -34,7 +34,9 @@ jobs:
     - name: npm ci
       run: |
         npm ci
-        npm run dev > "/dev/null" 2>&1
+        npm dist
+        (npx http-server docs/.vuepress/dist &)
+        wait-on http://localhost:8080
 
     - name: install puppeteer-headful
       uses: mujo-code/puppeteer-headful@master
@@ -43,7 +45,7 @@ jobs:
     - name: screenshots-ci-action
       uses: flameddd/screenshots-ci-action@v1.1.1
       with:
-        url: http://localhost:3000
+        url: http://localhost:8080
         devices: iPhone 6,iPhone 6 landscape
         noDesktop: true
       env:
