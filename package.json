@@ -4,8 +4,8 @@
   "description": "Another blogging attempt",
   "main": "index.js",
   "engines": {
-	"node": "^14"
-},
+    "node": "^14"
+  },
   "scripts": {
     "dev": "vuepress dev docs",
     "dist": "vuepress build docs"
@@ -13,7 +13,8 @@
   "author": "Stephan Hoogland <stephan@shoogland.com>",
   "license": "ISC",
   "dependencies": {
-    "@vuepress/plugin-google-analytics": "^1.7.1"
+    "@vuepress/plugin-google-analytics": "^1.7.1",
+    "wait-on": "^5.2.0"
   },
   "devDependencies": {
     "vuepress": "^1.7.1",

@@ -36,7 +36,7 @@ jobs:
         npm ci
         npm run dist
         (npx http-server docs/.vuepress/dist &)
-        wait-on http://localhost:8080
+        ./node_modules/.bin/wait-on http://localhost:8080
 
     - name: install puppeteer-headful
       uses: mujo-code/puppeteer-headful@master
