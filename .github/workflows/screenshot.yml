@@ -34,7 +34,7 @@ jobs:
     - name: npm ci
       run: |
         npm ci
-        npm dist
+        npm run dist
         (npx http-server docs/.vuepress/dist &)
         wait-on http://localhost:8080
 
