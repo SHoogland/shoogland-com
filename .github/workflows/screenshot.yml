@@ -1,0 +1,51 @@
+name: screenshots ci actions
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+
+    # get the node version from the .nvmrc file
+    - name: Read .nvmrc
+      run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+      id: nvm
+
+    # setup node based on the version from the .nvmrc file, fetched in the previous step
+    - name: Setup Node.js (.nvmrc)
+      uses: actions/setup-node@v1
+      with:
+        node-version: "${{ steps.nvm.outputs.NVMRC }}"
+
+    # setup the node cache (node_modules) with github actions cache
+    - name: Cache Node - npm
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-cache-
+
+    # run the ci equivalent of npm install
+    - name: npm ci
+      run: |
+        npm ci
+        npm run dev > "/dev/null" 2>&1
+
+    - name: install puppeteer-headful
+      uses: mujo-code/puppeteer-headful@master
+      env:
+        CI: 'true'
+    - name: screenshots-ci-action
+      uses: flameddd/screenshots-ci-action@v1.1.1
+      with:
+        url: http://localhost:3000
+        devices: iPhone 6,iPhone 6 landscape
+        noDesktop: true
+      env:
+        TELE_CHAT_ID: ${{ secrets.TELE_CHAT_ID }}
+        TELE_BOT_TOKEN: ${{ secrets.TELE_BOT_TOKEN }}
