@@ -38,16 +38,23 @@ jobs:
         (npx http-server docs/.vuepress/dist &)
         ./node_modules/.bin/wait-on http://localhost:8080
 
-    - name: install puppeteer-headful
-      uses: mujo-code/puppeteer-headful@master
-      env:
-        CI: 'true'
-    - name: screenshots-ci-action
-      uses: flameddd/screenshots-ci-action@v1.1.1
+    - uses: cypress-io/github-action@v2
+    - uses: actions/upload-artifact@v1
+      if: failure()
       with:
-        url: http://localhost:8080
-        devices: iPhone 6,iPhone 6 landscape
-        noDesktop: true
-      env:
-        TELE_CHAT_ID: ${{ secrets.TELE_CHAT_ID }}
-        TELE_BOT_TOKEN: ${{ secrets.TELE_BOT_TOKEN }}
+        name: cypress-screenshots
+        path: cypress/screenshots
+
+    # - name: install puppeteer-headful
+    #   uses: mujo-code/puppeteer-headful@master
+    #   env:
+    #     CI: 'true'
+    # - name: screenshots-ci-action
+    #   uses: flameddd/screenshots-ci-action@v1.1.1
+    #   with:
+    #     url: http://localhost:8080
+    #     devices: iPhone 6,iPhone 6 landscape
+    #     noDesktop: true
+    #   env:
+    #     TELE_CHAT_ID: ${{ secrets.TELE_CHAT_ID }}
+    #     TELE_BOT_TOKEN: ${{ secrets.TELE_BOT_TOKEN }}
