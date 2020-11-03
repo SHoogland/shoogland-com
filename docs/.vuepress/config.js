@@ -5,7 +5,8 @@ module.exports = {
 	description: 'Professional Backend Developer',
 	head: [
 		['link', { rel: 'icon', href: '/favicon.png' }],
-		['meta', { name: 'author', content: 'Stephan Hoogland'}]
+		['meta', { name: 'author', content: 'Stephan Hoogland' }],
+		['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }]
 	],
 	themeConfig: {
 		repo: 'shoogland/shoogland-com',
