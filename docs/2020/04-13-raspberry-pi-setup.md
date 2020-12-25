@@ -45,4 +45,9 @@ Update
 Reboot
 - `sudo reboot`
 
+Fix locale issues
+- `sudo locale-gen en_US en_US.UTF-8`
+- `sudo dpkg-reconfigure locales`
+- select en_us.utf-8 while reconfiguring
+
 <disqus />
