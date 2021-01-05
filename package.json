@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "cypress": "^6.2.0",
-    "vuepress": "^1.7.1",
+    "vuepress": "^1.8.0",
     "vuepress-plugin-feed": "^0.1.9",
     "vuepress-plugin-sitemap": "^2.3.1"
   }
