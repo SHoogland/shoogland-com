@@ -13,11 +13,11 @@
   "author": "Stephan Hoogland <stephan@shoogland.com>",
   "license": "ISC",
   "dependencies": {
-    "@vuepress/plugin-google-analytics": "^1.7.1",
+    "@vuepress/plugin-google-analytics": "^1.8.0",
     "wait-on": "^5.2.1"
   },
   "devDependencies": {
-    "cypress": "^6.2.0",
+    "cypress": "^6.2.1",
     "vuepress": "^1.8.0",
     "vuepress-plugin-feed": "^0.1.9",
     "vuepress-plugin-sitemap": "^2.3.1"
