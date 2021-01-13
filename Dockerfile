@@ -1,6 +1,6 @@
 FROM nginx:stable
 
-LABEL org.opencontainers.image.source https://github.com/SHoogland/shoogland-com
+LABEL "org.opencontainers.image.source"="https://github.com/SHoogland/shoogland-com"
 
 COPY docs/.vuepress/dist/ /usr/share/nginx/html
 
