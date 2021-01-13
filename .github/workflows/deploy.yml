@@ -42,8 +42,17 @@ jobs:
         npm ci
         npm run dist
 
-    - name: deploy
-      run: aws s3 sync docs/.vuepress/dist s3://${{ secrets.AWS_S3_BUCKET }}/ --exclude "_redirects" --no-progress --delete
+    - name: Push to GitHub Packages
+      uses: docker/build-push-action@v1
+      with:
+        username: shoogland
+        password: ${{ secrets.GITHUB_TOKEN }}
+        registry: docker.pkg.github.com
+        repository: shoogland/shoogland-com/my-blog
+        tag_with_ref: true
+
+    # - name: deploy
+    #   run: aws s3 sync docs/.vuepress/dist s3://${{ secrets.AWS_S3_BUCKET }}/ --exclude "_redirects" --no-progress --delete
 
 #     - name: change meta data (headers/cacheability)
 #       run: aws s3 cp s3://${{ secrets.AWS_S3_BUCKET }}/ s3://${{ secrets.AWS_S3_BUCKET }}/ --exclude "index.html" --exclude "404.html" --recursive --metadata-directive REPLACE --expires 2022-01-01T00:00:00Z --cache-control max-age=604.800,public
