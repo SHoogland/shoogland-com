@@ -43,13 +43,11 @@ jobs:
         npm run dist
 
     - name: Push to GitHub Packages
-      uses: docker/build-push-action@v1
-      with:
-        username: shoogland
-        password: ${{ secrets.GITHUB_TOKEN }}
-        registry: docker.pkg.github.com
-        repository: shoogland/shoogland-com/my-blog
-        tag_with_ref: true
+      run: |
+        echo ${{ secrets.PAT }} | docker login ghcr.io -u shoogland --password-stdin
+        docker build . --tag ghcr.io/shoogland/shoogland-com:$GITHUB_SHA --tag gghcr.io/shoogland/shoogland-com:latest
+        docker push ghcr.io/shoogland/shoogland-com:latest
+        docker push ghcr.io/shoogland/shoogland-com:$GITHUB_SHA
 
     # - name: deploy
     #   run: aws s3 sync docs/.vuepress/dist s3://${{ secrets.AWS_S3_BUCKET }}/ --exclude "_redirects" --no-progress --delete
