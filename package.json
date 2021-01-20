@@ -17,7 +17,7 @@
     "wait-on": "^5.2.1"
   },
   "devDependencies": {
-    "cypress": "^6.2.1",
+    "cypress": "^6.3.0",
     "vuepress": "^1.8.0",
     "vuepress-plugin-feed": "^0.1.9",
     "vuepress-plugin-sitemap": "^2.3.1"
