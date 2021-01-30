@@ -1,4 +1,4 @@
-FROM nginx:stable
+FROM nginx:stable-alpine
 
 LABEL "org.opencontainers.image.source"="https://github.com/SHoogland/shoogland-com"
 
