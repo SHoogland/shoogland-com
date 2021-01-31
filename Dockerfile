@@ -18,7 +18,7 @@ LABEL "traefik.http.routers.shoogland-com-https.tls"="true"
 LABEL "traefik.http.routers.shoogland-com-https.tls.certresolver"="myresolver"
 LABEL "traefik.http.routers.shoogland-com-https.middlewares"="www_redirect"
 LABEL "traefik.http.middlewares.www_redirect.redirectregex.regex"="^https?:\/\/(www\.)?shoogland\.com\/?(.*)$"
-LABEL "traefik.http.middlewares.www_redirect.redirectregex.replacement"="https://www.shoogland.com/${2}"
+LABEL "traefik.http.middlewares.www_redirect.redirectregex.replacement"="https://www.shoogland.com/\${2}"
 LABEL "traefik.http.middlewares.www_redirect.redirectregex.permanent"="true"
 
 COPY docs/.vuepress/dist/ /usr/share/nginx/html
