@@ -14,19 +14,19 @@ feed:
 
 So, we have our planning board here at Matise. Maurits wrote all about it in [his post](https://blog.matise.nl/our-planning-board-on-a-second-screen-ab072d6e28ed) almost a year ago. Now this works great, every day everyone is able to see what he has to do for that day. But every now and then, this happens:
 
-![broken planning display](../assets/2017/matise-planning-display-broken.jpeg)
+<image-element source="2017/matise-planning-display-broken" width="740" height="555" alt="broken planning display" />
 
 Which is happening because of "access tokens". More specifically because of [forecast](https://forecastapp.com) invalidating them. Maurits wrote about the 60 day expire date on the tokens, which still holds true. But does mean we had to update the planning board every 2 months. Which brought me to the point of this blogpost: can we automate this?
 
 ## The sign in flow
 First things first, I started by looking at how forecast handles logging in, and where we get the access token in the progress.
 
-![Forecast login page](../assets/2017/forecast-login-page.png)
+<image-element source="2017/forecast-login-page" width="740" height="449" alt="Forecast login page" type="png" />
 Forecast login page
 
 I started with the forecast login page. Displayed above is the Harvest ID sign in page. This is where we have to sign in automagically to get to the next page.
 
-![Forecast account select page](../assets/2017/forecast-account-select-page.png)
+<image-element source="2017/forecast-account-select-page" width="740" height="449" alt="Forecast account select page" type="png" />
 Forecast account select page
 
 The above page is the result of signing in. In the HTML of the account selection page is a link which has the account ID we are looking for. This link "https://id.getharvest.com/accounts/[accountID]" is what we need for the last step. It returns a redirect with the accessToken in the target link. Looks easy enough right?
@@ -70,7 +70,7 @@ The username and password are easy, thats something I know. The other 2 is where
 
 If you look at the second `<input>` tag we found the authenticity_token. And when we look at the cookies in the inspector we find the _iridesco-identity_session.
 
-![Forecast identity cookie](../assets/2017/forecast-identity-cookie.png)
+<image-element source="2017/forecast-identity-cookie" width="740" height="230" alt="Forecast identity cookie" type="png" />
 
 Combining this knowledge with some [npm](https://www.npmjs.com/) libraries ([request](https://www.npmjs.com/package/request), [cheerio](https://www.npmjs.com/package/cheerio)) we get the following script which returns the authenticity token and captures the cookie session.
 
@@ -151,7 +151,7 @@ Now we have the accesstoken in a database. We can do some cool stuff with it. Fo
 
 Side note:
 
-![Forecast sessions](../assets/2017/forecast-sessions.gif)
+![Forecast sessions](https://www.shoogland.com/images/shoogland-com/2017/forecast-sessions.gif)
 
 I have the automated sign in running every hour to keep my access token fresh. But when I went to the Harvest ID security page, I noticed the ridiculous amount of sessions I created. Once we implement the code in the planning board I am probably turning the access token expire age to 18 hours instead of 60 days, so there will never be more than 18 active sessions.
 

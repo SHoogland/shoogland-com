@@ -29,19 +29,20 @@ This is my so called blog, I'm more and more writing down tech projects I try an
 
 I currently work for [Bravoure](https://bravoure.nl)
 
-![Bravoure Logo](./assets/bravoure.svg)
+![Bravoure Logo](https://www.shoogland.com/images/shoogland-com/bravoure.svg)
 
 ## Hobbies
 
 I wanted to add some images that tell a little bit about me:
 
-![Me walking towards a fire](./assets/me-walking-to-fire.png)
+<image-element source="me-walking-to-fire" width="740" height="555" alt="Me walking towards a fire" />
 I like to create a fire every now and then, this was a rather big one...
 
-![My Motor](./assets/my-motor.jpg)
+<image-element source="my-motor" width="740" height="555" alt="My Motor" />
 I drive to work on this piece of art (Yamaha FZ1 2011)
 
 <a rel="ar" href="/ar/my-home.usdz">
-	<img src="./assets/my-home.png">
+	<image-element source="my-home" width="740" height="629" alt="My Home" type="png" />
 </a>
+
 I recently bought a home and drew it in sketchup
