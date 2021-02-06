@@ -15,6 +15,7 @@ module.exports = {
 		lastUpdated: 'Last Updated',
 		editLinkText: 'Edit this page on GitHub',
 		sidebar: [
+			'/2021/',
 			'/2020/',
 			'/2017/',
 			'/2015/'

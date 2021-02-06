@@ -35,7 +35,7 @@ jobs:
     # run the ci equivalent of npm install
     - name: npm ci
       run: |
-        npm ci
+        npm ci --only=production
         npm run dist
 
     - name: Push to GitHub Packages
