@@ -75,7 +75,7 @@ mkdir certbot/www
 ```
 
 nginx-config/proxy.conf
-```conf
+```apacheconf
 #server {
 #	listen 443 ssl;
 #	server_name [redacted_host_name];
