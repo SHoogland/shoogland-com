@@ -259,6 +259,6 @@ on another host filebeat setup
 - add `deb [arch=amd64] https://packages.elastic.co/curator/5/debian stable main` to that file
 - `apt-get update`
 - `apt-get install elasticsearch-curator`
-- `curator_cli delete_indices --filter_list '{"filtertype":"age","source":"creation_date" ,"direction":"older","unit":"days","unit_count":45}'`
+- `curator_cli delete_indices --filter_list '{"filtertype":"age", "source":"creation_date", "direction":"older", "unit":"days", "unit_count":45}'`
 
 <disqus />

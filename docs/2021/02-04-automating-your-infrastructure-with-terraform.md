@@ -19,7 +19,7 @@ I want to be able to spin up a droplet on digital ocean, add its ip to a dns pro
 ## Terraform
 Infrastructure as code, lovely concept, but for some reason just out of reach to work out of the box. Maybe people want to keep their production setups private or I haven't found the public ones yet. So there is room for more simple examples.
 
-I started with this great write up to get started with terraform and a remote state:
+I started with this great write up of how to get started with terraform and a remote state:
 
 [Terraform remote state setup by Kyler Middleton](https://medium.com/swlh/lets-do-devops-bootstrap-aws-to-your-terraform-ci-cd-azure-devops-github-actions-etc-b3cc5a636dce)
 
