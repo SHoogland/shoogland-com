@@ -23,7 +23,8 @@ module.exports = {
 	},
 	plugins: {
 		'sitemap': {
-			hostname: url
+			hostname: url,
+			exclude: ['/404.html']
 		},
 		'@vuepress/google-analytics': {
 			'ga': 'UA-54040031-1'
