@@ -132,7 +132,7 @@ resource "digitalocean_ssh_key" "mbp_sh" {
   public_key = file("ssh_keys/id_rsa.pub")
 }
 
-# a digital ocean droplet with a user user-data file to provision the droplet
+# a digital ocean droplet with a user-data file to provision the droplet
 # I ran rancheros as everything is going to be in docker
 # add your defined ssh key to be able to login to the droplet later
 resource "digitalocean_droplet" "www_shoogland_com" {
@@ -278,7 +278,5 @@ write_files:
 Using my ghcr.io/shoogland/shoogland-com image as an example which exposes one port (80) as the website I want to run.
 
 Commit this to your repository, wait a little bit while the action runs, the droplet gets provisioned, dns records are created, traefik provisions a certificate, and your good to go. Thats how I run this website at the time of writing (cant promise I won't figure out something new a week or month later).
-
-The End!
 
 <disqus />
