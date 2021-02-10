@@ -12,6 +12,7 @@ module.exports = {
 		repo: 'shoogland/shoogland-com',
 		editLinks: true,
 		docsDir: 'docs',
+		docsBranch: 'main',
 		lastUpdated: 'Last Updated',
 		editLinkText: 'Edit this page on GitHub',
 		sidebar: [
