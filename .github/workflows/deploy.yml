@@ -45,16 +45,16 @@ jobs:
         docker push ghcr.io/shoogland/shoogland-com:latest
         docker push ghcr.io/shoogland/shoogland-com:$GITHUB_SHA
 
-    - name: update container to latest version
-      uses: fifsky/ssh-action@master
-      with:
-        command: |
-          docker pull ghcr.io/shoogland/shoogland-com
-          docker stop shoogland-com
-          docker rm shoogland-com
-          docker run -d --name shoogland-com --restart=always ghcr.io/shoogland/shoogland-com
-          docker image prune -f
-        host: shoogland.com
-        user: rancher
-        key: ${{ secrets.PRIVATE_KEY}}
+    # - name: update container to latest version
+    #   uses: fifsky/ssh-action@master
+    #   with:
+    #     command: |
+    #       docker pull ghcr.io/shoogland/shoogland-com
+    #       docker stop shoogland-com
+    #       docker rm shoogland-com
+    #       docker run -d --name shoogland-com --restart=always ghcr.io/shoogland/shoogland-com
+    #       docker image prune -f
+    #     host: shoogland.com
+    #     user: rancher
+    #     key: ${{ secrets.PRIVATE_KEY}}
 
