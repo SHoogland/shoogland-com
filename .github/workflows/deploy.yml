@@ -42,13 +42,13 @@ jobs:
       run: echo ${{ secrets.PAT }} | docker login ghcr.io -u shoogland --password-stdin
 
     - name: Build docker image
-      run: docker build . --tag ghcr.io/shoogland/shoogland-com:$GITHUB_SHA --tag ghcr.io/shoogland/shoogland-com:latest
+      run: docker build . --tag "ghcr.io/shoogland/shoogland-com:$GITHUB_SHA" --tag "ghcr.io/shoogland/shoogland-com:latest"
 
     - name: Push to GitHub Packages with latest tag
       run: docker push ghcr.io/shoogland/shoogland-com:latest
 
     - name: Push to GitHub Packages with sha tag
-      run: docker push ghcr.io/shoogland/shoogland-com:$GITHUB_SHA
+      run: docker push "ghcr.io/shoogland/shoogland-com:$GITHUB_SHA"
 
     # - name: update container to latest version
     #   uses: fifsky/ssh-action@master
