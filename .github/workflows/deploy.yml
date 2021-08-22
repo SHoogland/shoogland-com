@@ -40,7 +40,7 @@ jobs:
 
     - name: Push to GitHub Packages
       run: |
-        echo ${{ secrets.PAT }} | docker login ghcr.io -u shoogland --password-stdin
+        echo "${{ secrets.PAT }}" | docker login ghcr.io -u shoogland --password-stdin
         docker build . --tag ghcr.io/shoogland/shoogland-com:$GITHUB_SHA --tag ghcr.io/shoogland/shoogland-com:latest
         docker push ghcr.io/shoogland/shoogland-com:latest
         docker push ghcr.io/shoogland/shoogland-com:$GITHUB_SHA
