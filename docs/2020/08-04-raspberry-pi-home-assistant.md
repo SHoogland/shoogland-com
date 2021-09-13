@@ -41,6 +41,12 @@ sudo apt-get install -y python3 python3-pip
 sudo pip3 install docker-compose
 ```
 
+alternative solution for install
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
 Add a docker-compose.yml
 ```yml
 version: '3'
