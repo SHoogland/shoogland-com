@@ -46,8 +46,12 @@ Reboot
 - `sudo reboot`
 
 Fix locale issues
-- `sudo locale-gen en_US en_US.UTF-8`
-- `sudo dpkg-reconfigure locales`
-- select en_us.utf-8 while reconfiguring
+```
+If it happens when using SSH, this is a fault on the SSH client, not the RPi. For example using an Ubuntu machine as the SSH client will cause this problem.
+
+To fix this SSH problem, edit the file /etc/ssh/ssh_config on the SSH client (not the RPi) and remove the line
+SendEnv LANG LC_*
+```
+https://www.raspberrypi.org/forums/viewtopic.php?f=50&t=11870
 
 <disqus />
