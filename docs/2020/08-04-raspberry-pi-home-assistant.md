@@ -26,6 +26,13 @@ sudo sh get-docker.sh
 sudo usermod -aG docker $USER
 ```
 
+Add user to docker group
+```bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+exit
+```
+
 install docker compose:
 ```bash
 sudo apt-get install libffi-dev libssl-dev
