@@ -20,6 +20,6 @@
     "wait-on": "^6.0.0"
   },
   "devDependencies": {
-    "cypress": "^8.3.1"
+    "cypress": "^8.4.0"
   }
 }
