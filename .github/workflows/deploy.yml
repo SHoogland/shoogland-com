@@ -19,18 +19,10 @@ jobs:
 
     # setup node based on the version from the .nvmrc file, fetched in the previous step
     - name: Setup Node.js (.nvmrc)
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: "${{ steps.nvm.outputs.NVMRC }}"
-
-    # setup the node cache (node_modules) with github actions cache
-    - name: Cache Node - npm
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-cache-
+        cache: 'npm'
 
     # run the ci equivalent of npm install
     - name: npm ci
