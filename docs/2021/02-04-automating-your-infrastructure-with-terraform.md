@@ -24,7 +24,7 @@ I started with this great write up of how to get started with terraform and a re
 [Terraform remote state setup by Kyler Middleton](https://medium.com/swlh/lets-do-devops-bootstrap-aws-to-your-terraform-ci-cd-azure-devops-github-actions-etc-b3cc5a636dce)
 
 ## Managing the cloud through git
-Next I got my digital ocean api key and aws access credentials and added it to github action secrets of a fresh repository. Together with the following github action workflow, everything will now be run from the cloud, by the cloud (github).
+Next I got my Digital Ocean API key and aws access credentials and added it to GitHub action secrets of a fresh repository. Together with the following GitHub action workflow, everything will now be run from the cloud, by the cloud (GitHub).
 
 ```yaml
 name: Apply

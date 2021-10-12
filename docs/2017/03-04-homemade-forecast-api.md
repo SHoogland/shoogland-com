@@ -96,7 +96,7 @@ npmRequest(options, (error, response, body) => {
 
 As you can see we end up with the authenticityToken in a variable and the session neatly taken care of by the request cookie jar ("npmRequest.jar()").
 
-The cookie jar is a very useful tool. Sadly it took me a while to figure this out. If you don’t create a new instance of the cookie jar, request uses some hidden global storage object to store your cookies. This resulted in me being very frustrated with the fact that it was working in my postman calls but not in my javascript code.
+The cookie jar is a very useful tool. Sadly it took me a while to figure this out. If you don’t create a new instance of the cookie jar, request uses some hidden global storage object to store your cookies. This resulted in me being very frustrated with the fact that it was working in my postman calls but not in my JavaScript code.
 
 ## Part 2: Signing in
 With the information gathered from the sign in page and a email and password we can create the following request.
@@ -122,7 +122,7 @@ npmRequest(options, (error, response, body) => {
 Now we have a logged in session token in the cookie jar.
 
 ## Part 3: Access Token
-The final requests gets the access token that we are looking for. With some fancy regex code I get the accountId and accessToken out of the link.
+The final requests gets the access token that we are looking for. With some fancy regular expression code I get the accountId and accessToken out of the link.
 
 ```javascript
 var options = {
@@ -141,10 +141,10 @@ npmRequest(options, (error, response, body) => {
 });
 ```
 
-The /accounts/[accountId] endpoint returns a 302 redirect with the link we need in a location header. With the regex shown above I simply extract the accountId and accessToken for further use.
+The /accounts/[accountId] endpoint returns a 302 redirect with the link we need in a location header. With the regular expression shown above I simply extract the accountId and accessToken for further use.
 
 ## Using the code
-After combining all the requests with some Parse.Promise magic I created a hourly Parse job. Which if you are interested I shared as a [gist on github](https://gist.github.com/SHoogland/c9a7bf9622583d78a3d3223d5c9f6e53).
+After combining all the requests with some Parse.Promise magic I created a hourly Parse job. Which if you are interested I shared as a [gist on GitHub](https://gist.github.com/SHoogland/c9a7bf9622583d78a3d3223d5c9f6e53).
 
 ## Afterthoughts
 Now we have the accesstoken in a database. We can do some cool stuff with it. For example we are thinking of fetching a fresh token every day when the planning board launches, so we never have to update the code of the planning board again.
