@@ -7,17 +7,17 @@ updates:
   assignees:
     - SHoogland
   versioning-strategy: increase
+
 - package-ecosystem: "github-actions"
   directory: "/"
   schedule:
     interval: "daily"
   assignees:
     - SHoogland
-  versioning-strategy: increase
+
 - package-ecosystem: "docker"
   directory: "/"
   schedule:
     interval: "daily"
   assignees:
     - SHoogland
-  versioning-strategy: increase
