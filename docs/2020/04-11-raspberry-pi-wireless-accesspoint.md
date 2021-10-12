@@ -17,7 +17,7 @@ download pi raspbian img
 
 use diskutils to unmount
 
-check the disk id in disk utils (on my mac disk2)
+check the disk ID in disk utils (on my mac disk2)
 
 write img to sd card
 `sudo dd bs=1m if=2020-02-13-raspbian-buster-lite.img of=/dev/rdisk2 conv=sync`
@@ -64,7 +64,7 @@ add `/etc/hostapd/hostapd.conf` to DAEMON_CONF and uncomment
 
 sudo reboot
 
-add this point the pi boots with an visible access point for wifi clients
+add this point the pi boots with an visible access point for Wi-Fi clients
 
 sudo nano /etc/network/interfaces
 
@@ -84,6 +84,6 @@ post-down brctl delbr br0
 
 sudo reboot
 
-the pi reboots and bridges the access point connections to the ethernet interface making wifi clients appear as ethernet clients on the network
+the pi reboots and bridges the access point connections to the ethernet interface making Wi-Fi clients appear as ethernet clients on the network
 
 <disqus />

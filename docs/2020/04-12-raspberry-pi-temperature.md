@@ -13,7 +13,7 @@ feed:
 # Raspberry Pi Temperature
 Code to upload the measured temp on a raspberry pi to firebase
 
-[Repo](https://github.com/SHoogland/pi-temperature)
+[Repository](https://github.com/SHoogland/pi-temperature)
 
 resources: 
 - https://www.circuitbasics.com/raspberry-pi-ds18b20-temperature-sensor-tutorial/
@@ -24,7 +24,7 @@ download pi raspbian img
 
 use diskutils to unmount
 
-check the disk id in disk utils (on my mac disk2)
+check the disk ID in disk utils (on my mac disk2)
 
 write img to sd card
 `sudo dd bs=1m if=2020-02-13-raspbian-buster-lite.img of=/dev/rdisk2 conv=sync`

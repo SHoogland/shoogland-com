@@ -10,7 +10,7 @@ feed:
   enable: true
 ---
 
-# An example apache configuration for an html proxy
+# An example apache configuration for an HTML proxy
 
 A configuration file to set up a proxy in front of another webserver
 
