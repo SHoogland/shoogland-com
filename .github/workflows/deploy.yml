@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@v2
 
     # get the node version from the .nvmrc file
     - name: Read .nvmrc
