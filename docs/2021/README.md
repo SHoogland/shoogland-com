@@ -13,3 +13,6 @@ New year, new fun!
 
 #### February
 - [Automating your infrastructure with terraform](./02-04-automating-your-infrastructure-with-terraform.md)
+
+#### November
+- [Craftcms development in the cloud](./11-09-craft-development-in-codespaces.md)

@@ -23,7 +23,7 @@ This is my so called blog, I'm more and more writing down tech projects I try an
 
 - [GitHub](https://github.com/shoogland)
 - [Twitter](https://twitter.com/s_hoogland)
-- [Instagram](https://instagram.com/s_hoogland)
+- [Instagram](https://www.instagram.com/s_hoogland/)
 
 ## Work
 
