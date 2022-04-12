@@ -1,25 +1,25 @@
 {
-  "name": "www-shoogland-com",
-  "version": "1.0.0",
-  "description": "Another blogging attempt",
-  "main": "index.js",
-  "engines": {
-    "node": "^14"
-  },
-  "scripts": {
-    "dev": "vuepress dev docs",
-    "dist": "vuepress build docs"
-  },
-  "author": "Stephan Hoogland <stephan@shoogland.com>",
-  "license": "ISC",
-  "dependencies": {
-    "@vuepress/plugin-google-analytics": "^1.9.7",
-    "vuepress": "^1.9.7",
-    "vuepress-plugin-feed": "^0.1.9",
-    "vuepress-plugin-sitemap": "^2.3.1",
-    "wait-on": "^6.0.1"
-  },
-  "devDependencies": {
-    "cypress": "^9.5.3"
-  }
+	"name": "www-shoogland-com",
+	"version": "1.0.0",
+	"description": "Another blogging attempt",
+	"main": "index.js",
+	"engines": {
+		"node": "^16"
+	},
+	"scripts": {
+		"dev": "vuepress dev docs",
+		"dist": "vuepress build docs"
+	},
+	"author": "Stephan Hoogland <stephan@shoogland.com>",
+	"license": "ISC",
+	"dependencies": {
+		"@vuepress/plugin-google-analytics": "^1.9.7",
+		"vuepress": "^1.9.7",
+		"vuepress-plugin-feed": "^0.1.9",
+		"vuepress-plugin-sitemap": "^2.3.1",
+		"wait-on": "^6.0.1"
+	},
+	"devDependencies": {
+		"cypress": "^9.5.3"
+	}
 }
