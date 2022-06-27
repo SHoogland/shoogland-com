@@ -54,9 +54,12 @@ mongorestore \
     dump
 ```
 
+sashido example from database connection string
+
+mongodb://[user]:[pw]@[host]:[port]/[db-name]?replicaSet=pgrs2&ssl=true
 
 ```
-mongodump --host --host <host>:<port> \
+mongodump --host <host>:<port> \
           --ssl \
           --username <user> \
           --password <pw> \
