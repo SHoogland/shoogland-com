@@ -3,14 +3,14 @@ name: Upload Website
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@v3
 
     # get the node version from the .nvmrc file
     - name: Read .nvmrc
@@ -19,30 +19,39 @@ jobs:
 
     # setup node based on the version from the .nvmrc file, fetched in the previous step
     - name: Setup Node.js (.nvmrc)
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3.4.1
       with:
         node-version: "${{ steps.nvm.outputs.NVMRC }}"
-
-    # setup the node cache (node_modules) with github actions cache
-    - name: Cache Node - npm
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-cache-
+        # cache: 'npm'
 
     # run the ci equivalent of npm install
     - name: npm ci
       run: |
-        npm ci
+        npm ci --only=production
         npm run dist
 
-    - name: Push to GitHub Packages
-      run: |
-        echo ${{ secrets.PAT }} | docker login ghcr.io -u shoogland --password-stdin
-        docker build . --tag ghcr.io/shoogland/shoogland-com:$GITHUB_SHA --tag ghcr.io/shoogland/shoogland-com:latest
-        docker push ghcr.io/shoogland/shoogland-com:latest
-        docker push ghcr.io/shoogland/shoogland-com:$GITHUB_SHA
+    - name: Log in to ghcr.io with docker
+      run: echo ${{ secrets.PAT }} | docker login ghcr.io -u shoogland --password-stdin
 
-    # https://github.com/marketplace/actions/remote-ssh-commands
+    - name: Build docker image
+      run: docker build . --tag "ghcr.io/shoogland/shoogland-com:$GITHUB_SHA" --tag "ghcr.io/shoogland/shoogland-com:latest"
+
+    - name: Push to GitHub Packages with latest tag
+      run: docker push ghcr.io/shoogland/shoogland-com:latest
+
+    - name: Push to GitHub Packages with sha tag
+      run: docker push "ghcr.io/shoogland/shoogland-com:$GITHUB_SHA"
+
+    # - name: update container to latest version
+    #   uses: fifsky/ssh-action@master
+    #   with:
+    #     command: |
+    #       docker pull ghcr.io/shoogland/shoogland-com
+    #       docker stop shoogland-com
+    #       docker rm shoogland-com
+    #       docker run -d --name shoogland-com --restart=always ghcr.io/shoogland/shoogland-com
+    #       docker image prune -f
+    #     host: shoogland.com
+    #     user: rancher
+    #     key: ${{ secrets.PRIVATE_KEY}}
+

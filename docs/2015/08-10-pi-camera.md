@@ -17,7 +17,7 @@ I wrote this down in august of 2020, because I was cleaning up the raspberry pi 
 
 ### Details
 
-We build the [timmerdorp.com](https://timmerdorp.com) website with a "live" header image during the Timmerdorp week.
+We build the [timmerdorp.com](https://timmerdorp.com) site with a "live" header image during the Timmerdorp week.
 So every minute or so, this code uploaded a new image to an s3 bucket, which then got shown on the homepage.
 
 ```sh

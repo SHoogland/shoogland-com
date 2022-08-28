@@ -14,11 +14,11 @@ feed:
 Before I do anything with a raspberry pi, I prepare it with the following steps:
 
 - download pi raspbian img 2020-02-13-raspbian-buster-lite.img [raspbian downloads](https://www.raspberrypi.org/downloads/raspbian/)
-- check the disk id in disk utils (on my mac disk2): `diskutil list`
+- check the disk ID in disk utils (on my mac disk2): `diskutil list`
 - unmount the sd card `diskutil unmountDisk /dev/disk2`
 - write img to sd card `sudo dd bs=1m if=2020-02-13-raspbian-buster-lite.img of=/dev/rdisk2 conv=sync`
 - add empty file with the name `ssh` to the sd card root (aka boot dir) to enable ssh
-- add `wpa_supplicant.conf` file with the wifi settings to enable wifi
+- add `wpa_supplicant.conf` file with the Wi-Fi settings to enable Wi-Fi
 
 ```apacheconf
 country=NL # Your 2-digit country code
@@ -46,8 +46,12 @@ Reboot
 - `sudo reboot`
 
 Fix locale issues
-- `sudo locale-gen en_US en_US.UTF-8`
-- `sudo dpkg-reconfigure locales`
-- select en_us.utf-8 while reconfiguring
+```
+If it happens when using SSH, this is a fault on the SSH client, not the RPi. For example using an Ubuntu machine as the SSH client will cause this problem.
+
+To fix this SSH problem, edit the file /etc/ssh/ssh_config on the SSH client (not the RPi) and remove the line
+SendEnv LANG LC_*
+```
+https://www.raspberrypi.org/forums/viewtopic.php?f=50&t=11870
 
 <disqus />

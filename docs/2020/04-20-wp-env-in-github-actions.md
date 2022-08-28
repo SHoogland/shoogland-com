@@ -10,9 +10,9 @@ feed:
   enable: true
 ---
 
-# e2e testing wordpress with wp-env on github actions
+# e2e testing WordPress with wp-env on GitHub actions
 
-An example workflow file to run e2e test on github actions.
+An example workflow file to run e2e test on GitHub actions.
 
 .github/workflows/run-wp.yml
 ```yaml

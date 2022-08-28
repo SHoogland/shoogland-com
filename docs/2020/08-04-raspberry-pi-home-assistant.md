@@ -23,6 +23,14 @@ install docker:
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
+sudo usermod -aG docker $USER
+```
+
+Add user to docker group
+```bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+exit
 ```
 
 install docker compose:
@@ -31,6 +39,12 @@ sudo apt-get install libffi-dev libssl-dev
 sudo apt install python3-dev
 sudo apt-get install -y python3 python3-pip
 sudo pip3 install docker-compose
+```
+
+alternative solution for install
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 Add a docker-compose.yml
@@ -75,7 +89,7 @@ mkdir certbot/www
 ```
 
 nginx-config/proxy.conf
-```conf
+```apacheconf
 #server {
 #	listen 443 ssl;
 #	server_name [redacted_host_name];

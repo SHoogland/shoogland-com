@@ -15,15 +15,15 @@ meta:
 
 # Stephan Hoogland
 
-That's me, a humble and epic backend developer, who can not seem to get interested in frontend code (css and everything that has to do with styling), hence the default vuepress theme site you are looking at right now.
+That's me, a humble and epic backend developer, who can not seem to get interested in frontend code (CSS and everything that has to do with styling), hence the default vuepress theme site you are looking at right now.
 
 This is my so called blog, I'm more and more writing down tech projects I try and was in need of a place to store and organize those documents.
 
 ## Profiles
 
-- [Github](https://github.com/shoogland)
+- [GitHub](https://github.com/shoogland)
 - [Twitter](https://twitter.com/s_hoogland)
-- [Instagram](https://instagram.com/s_hoogland)
+- [Instagram](https://www.instagram.com/s_hoogland/)
 
 ## Work
 

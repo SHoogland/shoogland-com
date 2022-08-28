@@ -10,9 +10,9 @@ feed:
   enable: true
 ---
 
-# Create a user in wordpress with php
+# Create a user in WordPress with php
 
-A simple function to add an wordpress administrator through code.
+A simple function to add an WordPress administrator through code.
 
 ```php
 add_action('init', 'add_admin_user');

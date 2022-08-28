@@ -3,9 +3,21 @@ updates:
 - package-ecosystem: npm
   directory: "/"
   schedule:
-    interval: daily
-    time: '04:00'
-  open-pull-requests-limit: 1
+    interval: "daily"
   assignees:
-  - SHoogland
+    - SHoogland
   versioning-strategy: increase
+
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: "daily"
+  assignees:
+    - SHoogland
+
+- package-ecosystem: "docker"
+  directory: "/"
+  schedule:
+    interval: "daily"
+  assignees:
+    - SHoogland
