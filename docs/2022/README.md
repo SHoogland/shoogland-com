@@ -13,3 +13,6 @@ New year, new fun!
 
 #### June
 - [IOS Scriptable GRIPP widget](./06-13-scriptable-gripp-widget.md)
+
+#### September
+- [Timmerdorp PI camera](./09-11-timmerdorp-pi-camera.md)
