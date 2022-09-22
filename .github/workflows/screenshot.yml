@@ -1,57 +1,45 @@
+---
 name: screenshots ci actions
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   screenshots:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    # get the node version from the .nvmrc file
-    - name: Read .nvmrc
-      run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
-      id: nvm
+      # get the node version from the .nvmrc file
+      - name: Read .nvmrc
+        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+        id: nvm
 
-    # setup node based on the version from the .nvmrc file, fetched in the previous step
-    - name: Setup Node.js (.nvmrc)
-      uses: actions/setup-node@v3.4.1
-      with:
-        node-version: "${{ steps.nvm.outputs.NVMRC }}"
+      # setup node based on the version from the .nvmrc file,
+      # fetched in the previous step
+      - name: Setup Node.js (.nvmrc)
+        uses: actions/setup-node@v3.4.1
+        with:
+          node-version: "${{ steps.nvm.outputs.NVMRC }}"
 
-    # run the ci equivalent of npm install
-    - name: npm ci
-      run: |
-        npm ci
-        npm run dist
-        (npx http-server docs/.vuepress/dist &)
-        ./node_modules/.bin/wait-on http://localhost:8080
+      # run the ci equivalent of npm install
+      - name: npm ci
+        run: |
+          npm ci
+          npm run dist
+          (npx http-server docs/.vuepress/dist &)
+          ./node_modules/.bin/wait-on http://localhost:8080
 
-    - uses: cypress-io/github-action@v4
-    - uses: actions/upload-artifact@v3
-      if: failure()
-      with:
-        name: cypress-screenshots
-        path: cypress/screenshots
+      - uses: cypress-io/github-action@v4
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
 
-    - uses: actions/upload-artifact@v3
-      if: always()
-      with:
-        name: cypress-videos
-        path: cypress/videos
-
-    # - name: install puppeteer-headful
-    #   uses: mujo-code/puppeteer-headful@master
-    #   env:
-    #     CI: 'true'
-    # - name: screenshots-ci-action
-    #   uses: flameddd/screenshots-ci-action@v1.1.1
-    #   with:
-    #     url: http://localhost:8080
-    #     devices: iPhone 6,iPhone 6 landscape
-    #     noDesktop: true
-    #   env:
-    #     TELE_CHAT_ID: ${{ secrets.TELE_CHAT_ID }}
-    #     TELE_BOT_TOKEN: ${{ secrets.TELE_BOT_TOKEN }}
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos

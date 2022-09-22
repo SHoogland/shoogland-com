@@ -1,60 +1,62 @@
+---
 name: Upload Website
 
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    # get the node version from the .nvmrc file
-    - name: Read .nvmrc
-      run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
-      id: nvm
+      # get the node version from the .nvmrc file
+      - name: Read .nvmrc
+        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+        id: nvm
 
-    # setup node based on the version from the .nvmrc file, fetched in the previous step
-    - name: Setup Node.js (.nvmrc)
-      uses: actions/setup-node@v3.4.1
-      with:
-        node-version: "${{ steps.nvm.outputs.NVMRC }}"
-        # cache: 'npm'
+      # setup node based on the version from the .nvmrc file, fetched in the previous step
+      - name: Setup Node.js (.nvmrc)
+        uses: actions/setup-node@v3.4.1
+        with:
+          node-version: "${{ steps.nvm.outputs.NVMRC }}"
+          # cache: 'npm'
 
-    # run the ci equivalent of npm install
-    - name: npm ci
-      run: |
-        npm ci --only=production
-        npm run dist
+      # run the ci equivalent of npm install
+      - name: npm ci
+        run: |
+          npm ci --only=production
+          npm run dist
 
-    - name: Log in to ghcr.io with docker
-      run: echo ${{ secrets.PAT }} | docker login ghcr.io -u shoogland --password-stdin
+      - name: Log in to ghcr.io with docker
+        run: echo ${{ secrets.PAT }} | docker login ghcr.io -u shoogland --password-stdin
 
-    - name: Build docker image
-      run: docker build . --tag "ghcr.io/shoogland/shoogland-com:$GITHUB_SHA" --tag "ghcr.io/shoogland/shoogland-com:latest"
+      - name: Build docker image
+        run: |
+          docker build . --tag "ghcr.io/shoogland/shoogland-com:$GITHUB_SHA" --tag "ghcr.io/shoogland/shoogland-com:latest"
 
-    - name: Push to GitHub Packages with latest tag
-      run: docker push ghcr.io/shoogland/shoogland-com:latest
+      - name: Push to GitHub Packages with latest tag
+        run: docker push ghcr.io/shoogland/shoogland-com:latest
 
-    - name: Push to GitHub Packages with sha tag
-      run: docker push "ghcr.io/shoogland/shoogland-com:$GITHUB_SHA"
+      - name: Push to GitHub Packages with sha tag
+        run: docker push "ghcr.io/shoogland/shoogland-com:$GITHUB_SHA"
 
-    - name: Install doctl
-      uses: digitalocean/action-doctl@v2
-      with:
-        token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 
-    - name: get kubectl creds
-      run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 sh-cluster-01
+      - name: get kubectl creds
+        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 sh-cluster-01
 
-    - name: get shoost deployment
-      run: kubectl get deployment -n traefik-system www-shoogland -o yaml > deployment.yaml
+      - name: get shoost deployment
+        run: kubectl get deployment -n traefik-system www-shoogland -o yaml > deployment.yaml
 
-    - name: update image tag
-      run: sed 's|ghcr\.io\/shoogland\/shoogland-com:.*|ghcr\.io\/shoogland\/shoogland-com:'${GITHUB_SHA}'|' < deployment.yaml > deployment2.yaml
+      - name: update image tag
+        run: sed 's|ghcr\.io\/shoogland\/shoogland-com:.*|ghcr\.io\/shoogland\/shoogland-com:'${GITHUB_SHA}'|' < deployment.yaml > deployment2.yaml
 
-    - name: apply updated image
-      run: kubectl apply -f deployment2.yaml
+      - name: apply updated image
+        run: kubectl apply -f deployment2.yaml
