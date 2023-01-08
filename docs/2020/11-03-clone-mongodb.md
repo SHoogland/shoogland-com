@@ -35,6 +35,8 @@ mongorestore
 
 `mongodb+srv://<user>:<pw>@<host>/<db-name>?retryWrites=true&w=majority`
 
+`mongodb+srv://user:pw@timmerdorp.ddksu.mongodb.net/?retryWrites=true&w=majority`
+
 ```
 mongodump \
     --host <host>:<port> \
@@ -76,3 +78,16 @@ mongorestore --host <clusterName>/<shard-host>:<port>,<shard-host>:<port>,<shard
              --authenticationDatabase admin \
              --nsExclude 'admin.system.*'
 ```
+
+// sashido export
+mongodump --uri "mongodb://user:pw@scalabledbs.cloudstrap.io:27002,scalabledbs.cloudstrap.io:27002,scalabledbs.cloudstrap.io:27002/pg-app-1-eu?replicaSet=pgrs2&ssl=true" \
+          --archive
+
+
+// mongodb atlas restore
+mongorestore \
+    --uri "mongodb+srv://user:pw@timmerdorp.ddksu.mongodb.net/?retryWrites=true&w=majority" \
+    --ssl \
+    --nsExclude "admin.system.*"
+    --db timmerdorp \
+    dump
