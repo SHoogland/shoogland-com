@@ -14,7 +14,7 @@ export default {
 	name: 'image-element',
 	data() {
 		return {
-			url: 'https://www.shoogland.com/images/',
+			url: 'https://res.cloudinary.com/shoogland/image/upload/',
 			rootFolder: '/shoogland-com/'
 		}
 	},
