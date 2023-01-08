@@ -17,7 +17,7 @@ With this site as the test subject.
 
 Left is hosted on aws cloudfront, right on netlify.
 
-<image-element source="2020/cloudfront-vs-netlify" width="740" height="379" alt="Cloudfront vs Netlify" type="png" />
+<image-element source="2020/cloudfront-vs-netlify" width="740" height="379" alt="Cloudfront vs Netlify" />
 Cloudfront vs Netlify
 
 <disqus />

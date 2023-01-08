@@ -21,12 +21,12 @@ Which is happening because of "access tokens". More specifically because of [for
 ## The sign in flow
 First things first, I started by looking at how forecast handles logging in, and where we get the access token in the progress.
 
-<image-element source="2017/forecast-login-page" width="740" height="449" alt="Forecast login page" type="png" />
+<image-element source="2017/forecast-login-page" width="740" height="449" alt="Forecast login page" />
 Forecast login page
 
 I started with the forecast login page. Displayed above is the Harvest ID sign in page. This is where we have to sign in automagically to get to the next page.
 
-<image-element source="2017/forecast-account-select-page" width="740" height="449" alt="Forecast account select page" type="png" />
+<image-element source="2017/forecast-account-select-page" width="740" height="449" alt="Forecast account select page" />
 Forecast account select page
 
 The above page is the result of signing in. In the HTML of the account selection page is a link which has the account ID we are looking for. This link "https://id.getharvest.com/accounts/[accountID]" is what we need for the last step. It returns a redirect with the accessToken in the target link. Looks easy enough right?
@@ -70,7 +70,7 @@ The username and password are easy, thats something I know. The other 2 is where
 
 If you look at the second `<input>` tag we found the authenticity_token. And when we look at the cookies in the inspector we find the _iridesco-identity_session.
 
-<image-element source="2017/forecast-identity-cookie" width="740" height="230" alt="Forecast identity cookie" type="png" />
+<image-element source="2017/forecast-identity-cookie" width="740" height="230" alt="Forecast identity cookie" />
 
 Combining this knowledge with some [npm](https://www.npmjs.com/) libraries ([request](https://www.npmjs.com/package/request), [cheerio](https://www.npmjs.com/package/cheerio)) we get the following script which returns the authenticity token and captures the cookie session.
 

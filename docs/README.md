@@ -24,6 +24,7 @@ This is my so called blog, I'm more and more writing down tech projects I try an
 - [GitHub](https://github.com/shoogland)
 - [Twitter](https://twitter.com/s_hoogland)
 - [Instagram](https://www.instagram.com/s_hoogland/)
+- <a rel="me" href="https://mastodon.social/@shoogland">Mastodon</a>
 
 ## Work
 
@@ -42,7 +43,7 @@ I like to create a fire every now and then, this was a rather big one...
 I drive to work on this piece of art (Yamaha FZ1 2011)
 
 <a rel="ar" href="/ar/my-home.usdz">
-	<image-element source="my-home" width="740" height="629" alt="My Home" type="png" />
+	<image-element source="my-home" width="740" height="629" alt="My Home" />
 </a>
 
 I recently bought a home and drew it in sketchup

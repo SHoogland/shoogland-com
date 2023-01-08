@@ -13,7 +13,7 @@ feed:
 # Scriptable gripp widget
 I was looking for a way to show my work planning in a simple format on my phone. the Scriptable app together with the GRIPP api turned out to be a great solution.
 
-<image-element source="2022/scriptable-ios-screenshot" width="375" height="812" alt="IOS screenshot with the scriptable widgets" type="png" />
+<image-element source="2022/scriptable-ios-screenshot" width="375" height="812" alt="IOS screenshot with the scriptable widgets" />
 
 ## scriptable code
 

@@ -33,7 +33,7 @@ composer create-project craftcms/craft my/project/path
 
 As soon as it finishes the project files I skipped out of the install, as this example is not about running it locally, I just want the starter files of a craft project.
 
-<image-element source="2021/craft-install" width="740" height="449" alt="Terminal window with the craft cms install" type="png" />
+<image-element source="2021/craft-install" width="740" height="449" alt="Terminal window with the craft cms install" />
 
 ## Codespace workspace container
 The codespace terminal runs in a container, or at least that is what I understand about it. To control this container, and subsequently the rest of the docker environment from within that container we set up the following config:
@@ -263,7 +263,7 @@ Whith those steps in place we can start our GitHub codespace. After launch we ne
 
 And there we are, craft running in a cloud based development environment:
 
-<image-element source="2021/welcome-craft" width="740" height="449" alt="Terminal window with the craft cms install" type="png" />
+<image-element source="2021/welcome-craft" width="740" height="449" alt="Terminal window with the craft cms install" />
 
 ## Conclusion
 I really like the idea of codespaces, ready to go, completely reproduceable dev environments in the cloud. No more individual mac or computer issues, and on top of that a bit quicker than our (mac and windows owners) local virtualised docker environment.
