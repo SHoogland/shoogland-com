@@ -19,6 +19,6 @@
 		"wait-on": "^7.0.1"
 	},
 	"devDependencies": {
-		"cypress": "^12.7.0"
+		"cypress": "^12.8.0"
 	}
 }
