@@ -91,3 +91,7 @@ mongorestore \
     --nsExclude "admin.system.*"
     --db timmerdorp \
     dump
+
+`mongodump --uri "mongodb+srv://[host]/[db]" --out [folder-to-dump] --username [username]`
+
+`mongorestore --uri "mongodb+srv://[host]/[db]" --username [username] --nsExclude "admin.system.*" [dumped-folder]`
