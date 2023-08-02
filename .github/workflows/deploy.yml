@@ -56,7 +56,7 @@ jobs:
         run: kubectl get deployment -n traefik-system www-shoogland -o yaml > deployment.yaml
 
       - name: update image tag
-        run: sed 's|ghcr\.io\/shoogland\/shoogland-com:.*|ghcr\.io\/shoogland\/shoogland-com:'${GITHUB_SHA}'|' < deployment.yaml > deployment2.yaml
+        run: sed "s|ghcr.io/shoogland/shoogland-com:.*|ghcr.io/shoogland/shoogland-com:${GITHUB_SHA}|" < deployment.yaml > deployment2.yaml
 
       - name: apply updated image
         run: kubectl apply -f deployment2.yaml
