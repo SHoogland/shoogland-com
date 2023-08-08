@@ -28,9 +28,9 @@ This is my so called blog, I'm more and more writing down tech projects I try an
 
 ## Work
 
-I currently work for [Bravoure](https://bravoure.nl)
+I currently work for [Mollie](https://mollie.com)
 
-![Bravoure Logo](https://www.shoogland.com/images/shoogland-com/bravoure.svg)
+![Mollie Logo](https://www.shoogland.com/images/shoogland-com/mollie.svg)
 
 ## Hobbies
 
