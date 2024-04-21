@@ -55,7 +55,7 @@ jobs:
         run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 sh-cluster-01
 
       - name: get shoost deployment
-        run: kubectl get deployment -n traefik-system www-shoogland -o yaml > deployment.yaml
+        run: kubectl get deployment -n argocd www-shoogland -o yaml > deployment.yaml
 
       - name: update image tag
         run: sed "s|ghcr.io/shoogland/shoogland-com:.*|ghcr.io/shoogland/shoogland-com:${GITHUB_SHA}|" < deployment.yaml > deployment2.yaml
