@@ -38,24 +38,27 @@ Repeated the woocommerce shop
 Corona
 
 ## 2021
-The new webshop, parse server
-hosted on sashido
-With the help of Stan van Baarsen, I build a completely new shop from scratch, no plugin or ticket service costs, just all we needed from a webshop catered to our needs.
-mail issues
+The new webshop, powered by [parse server](https://parseplatform.org/). Hosted on sashido. With the help of Stan van Baarsen, I build a completely new shop from scratch, no plugin or ticket service costs, just all we needed from a webshop catered to our needs.
+
+Problems:
+- some email issues (mailgun powered unhealthy IP adress)
 
 ## 2022
-sashido again
-Some small improvements and a flawless sale, we started selling tickets at 10:00 and were sold out at around 17:00.
+Again hosted on sashido. Some small improvements and a flawless sale, we started selling tickets at 10:00 and were sold out at around 17:00.
 
 ## 2023
-digital ocean kubernetes + mongodb atlas
-Problems: the demand was rising, a lot of people tried to buy tickets at 10:00 am sharp. The shop couldn't handle this, some double payments and mismatched tickets to orders occured.
+We moved away from Sashido to Digital Ocean kubernetes + mongodb atlas.
+
+Problems: 
+- the demand was rising, a lot of people tried to buy tickets at 10:00 am sharp. The shop couldn't handle this, some double payments and mismatched tickets to orders occured.
 
 ## 2024
-retry on kubernetes, some code improvements to prevent the issues from last year.
-I set up grafana log aggregation
-Still some issues, the ticket count failed, we sold more tickets than intended 616 instead of the 580 max I had configured.
-A small bug where old payment links could be used for changed orders
-And a crazy demand, a 1000 users (whatever this means, google) tried to buy tickets at 10:00 am.
+Retry on kubernetes, some code improvements to prevent the issues from last year.
+I set up grafana log aggregation.
+Problems:
+- Still some issues, the ticket count failed, we sold more tickets than intended 616 instead of the 580 max I had configured. (before changing it to 675 just after 10:00)
+- A small bug where old payment links could be used for changed orders.
+- Crazy demand, a 1000 users (whatever this exactly means, google analytics) tried to buy tickets at 10:00 am.
+
 <image-element source="2024/timmerdorp-google-analytics" width="740" height="1000" alt="Google analytics" type="png" />
 <image-element source="2024/grafana-request-metrics" width="740" height="425" alt="Grafana request metrics" type="png" />
