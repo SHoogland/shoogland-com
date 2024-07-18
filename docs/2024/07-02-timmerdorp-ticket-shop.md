@@ -56,7 +56,7 @@ Problems:
 Retry on kubernetes, some code improvements to prevent the issues from last year. And I set up grafana log aggregation.
 
 Problems:
-- Still some issues, the ticket count failed, we sold more tickets than intended 616 instead of the 580 max I had configured. (before changing it to 675 just after 10:00)
+- Still some issues, the ticket count failed, we sold more tickets than intended, 616 instead of the 580 max I had configured. (before changing it to 675 just after 10:00)
 - A small bug where old payment links could be used for changed orders.
 - Crazy demand, a 1000 users (whatever this exactly means, google analytics) tried to buy tickets at 10:00 am.
 
