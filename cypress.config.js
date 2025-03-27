@@ -5,4 +5,5 @@ module.exports = defineConfig({
 		setupNodeEvents(on, config) { },
 		supportFile: false
 	},
+	video: true
 })

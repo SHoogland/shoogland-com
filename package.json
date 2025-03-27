@@ -4,7 +4,7 @@
 	"description": "Another blogging attempt",
 	"main": "index.js",
 	"engines": {
-		"node": "^16"
+		"node": "^18"
 	},
 	"scripts": {
 		"dev": "vuepress dev docs",
