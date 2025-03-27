@@ -22,7 +22,7 @@ jobs:
         run: |
           npm ci
           npm run dist
-          (npx http-server docs/.vuepress/dist &)
+          (npx http-server docs/.vuepress/dist > /dev/null 2>&1 &)
           ./node_modules/.bin/wait-on http://localhost:8080
 
       - uses: cypress-io/github-action@v6
