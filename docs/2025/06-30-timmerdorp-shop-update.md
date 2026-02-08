@@ -10,7 +10,7 @@ feed:
   enable: true
 ---
 
-# Timmerdorp webshop, an update on 2025
+# Timmerdorp webshop, 2025 update
 
 ## Introduction
 This is a follow up on the [timmerdorp ticket shop post](https://www.shoogland.com/2024/07-02-timmerdorp-ticket-shop.html), where I described the history of the yearly  ticket sale and the issues we had. This year I want to share some of the improvements we made and how the sale went.
