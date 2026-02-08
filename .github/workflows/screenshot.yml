@@ -25,7 +25,7 @@ jobs:
           npx http-server -p 8080 docs/.vuepress/dist > /dev/null 2>&1 &
           ./node_modules/.bin/wait-on -v -t 10s http://127.0.0.1:8080
  
-      - uses: cypress-io/github-action@v6
+      - uses: cypress-io/github-action@v7
       - uses: actions/upload-artifact@v6
         if: failure()
         with:
