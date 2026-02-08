@@ -13,7 +13,7 @@ feed:
 # Timmerdorp webshop, an update on 2025
 
 ## Introduction
-This is a follow up on the [timmerdorp ticket shop post](), where I described the history of the yearly  ticket sale and the issues we had. This year I want to share some of the improvements we made and how the sale went.
+This is a follow up on the [timmerdorp ticket shop post](https://www.shoogland.com/2024/07-02-timmerdorp-ticket-shop.html), where I described the history of the yearly  ticket sale and the issues we had. This year I want to share some of the improvements we made and how the sale went.
 
 ## 2025
 Retry on kubernetes, some code improvements to prevent the issues from last year. I scaled up a little more aggresive than last year:
@@ -23,7 +23,7 @@ Retry on kubernetes, some code improvements to prevent the issues from last year
 
 This resulted in a more stable webshop, with no capacity related issues during the sale. 
 There were however some small issues:
-- The implmented ticket counter in redis worked mostly okay, but it seems some race conditions were still present, resulting in a few invalid available tickets during the release of expiring orders.
+- The implemented ticket counter in redis worked mostly okay, but it seems some race conditions were still present, resulting in a few invalid available tickets during the release of expiring orders.
 - The demand grew even further, 1200 users (whatever this exactly means, google analytics) tried to buy tickets at 10:00 am.
 
 <image-element source="2025/timmerdorp-google-analytics" width="740" height="1000" alt="Google analytics" type="png" />
