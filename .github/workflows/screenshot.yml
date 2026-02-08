@@ -24,8 +24,18 @@ jobs:
           npm run dist
           npx http-server -p 8080 docs/.vuepress/dist > /dev/null 2>&1 &
           ./node_modules/.bin/wait-on -v -t 10s http://127.0.0.1:8080
- 
+
+      - name: Install Node.js for cypress
+        uses: actions/setup-node@v6.2.0
+        with:
+          node-version-file: 'e2e/.nvmrc'
+          cache: 'npm'
+          cache-dependency-path: e2e/package-lock.json
+
       - uses: cypress-io/github-action@v6
+        with:
+          working-directory: e2e
+ 
       - uses: actions/upload-artifact@v6
         if: failure()
         with:
