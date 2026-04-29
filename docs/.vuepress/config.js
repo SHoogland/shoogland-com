@@ -26,12 +26,12 @@ module.exports = {
 			'/2015/'
 		]
 	},
-	plugins: {
-		'sitemap': {
+	plugins: [
+		['sitemap', {
 			hostname: url,
 			exclude: ['/404.html']
-		},
-		'feed': {
+		}],
+		['feed', {
 			canonical_base: url,
 			feed_options: {
 				author: {
@@ -42,6 +42,11 @@ module.exports = {
 			},
 			count: 100,
 			sort: entries => entries.reverse()
-		}
-	}
+		}],
+		[require('./plugins/body-script'), {
+			scripts: [
+				{ src: 'https://scripts.simpleanalyticscdn.com/latest.js', async: true, defer: true }
+			]
+		}]
+	]
 }
