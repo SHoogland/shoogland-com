@@ -1,13 +1,10 @@
 ---
 description: The timmerdorp ticket shop 2025 update
 date: 2025-06-30T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: 2025 timmerdorp webshop tickets sale voluntary
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: 2025 timmerdorp webshop tickets sale voluntary
 ---
 
 # Timmerdorp webshop, 2025 update

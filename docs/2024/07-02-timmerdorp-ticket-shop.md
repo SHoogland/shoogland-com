@@ -1,13 +1,10 @@
 ---
 description: The history of the timmerdorp ticket shop
 date: 2024-07-02T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: 2024 timmerdorp webshop tickets sale voluntary
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: 2024 timmerdorp webshop tickets sale voluntary
 ---
 
 # Timmerdorp webshop, a brief history

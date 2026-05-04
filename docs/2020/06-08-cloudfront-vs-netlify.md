@@ -1,13 +1,10 @@
 ---
 description: Amazon Cloudfront vs Netlify
 date: 2020-06-08T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: 2020 cloudfront comparison netlify
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: 2020 cloudfront comparison netlify
 ---
 
 # Amazon Cloudfront vs Netlify

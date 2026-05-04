@@ -1,8 +1,9 @@
 ---
 description: A list of my 2022 articles
-meta:
-  - name: keywords
-    content: 2022 articles blogposts
+head:
+  - - meta
+    - name: keywords
+      content: 2022 articles blogposts
 ---
 
 # 2022

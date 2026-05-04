@@ -1,13 +1,10 @@
 ---
 description: Leave clicking through cloud consoles to the past
 date: 2021-02-04T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: 2021 terraform infrastructure docker traefik digitalocean
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: 2021 terraform infrastructure docker traefik digitalocean
 ---
 
 # Automating your infrastructure with terraform

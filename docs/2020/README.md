@@ -1,8 +1,9 @@
 ---
 description: A list of my 2020 articles
-meta:
-  - name: keywords
-    content: 2020 articles blogposts
+head:
+  - - meta
+    - name: keywords
+      content: 2020 articles blogposts
 ---
 
 # 2020

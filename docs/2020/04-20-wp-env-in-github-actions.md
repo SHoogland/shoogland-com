@@ -1,13 +1,10 @@
 ---
 description: An example for e2e testing with wp-env, puppeteer and headless chrome on github actions
 date: 2020-04-20T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: 2020 wp-env github-actions e2e
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: 2020 wp-env github-actions e2e
 ---
 
 # e2e testing WordPress with wp-env on GitHub actions
