@@ -1,13 +1,10 @@
 ---
 description: Setup a raspberry pi with home assistant on docker
 date: 2020-08-04T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: 2020 raspberry pi docker home-assistant reverse-nginx-proxy
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: 2020 raspberry pi docker home-assistant reverse-nginx-proxy
 ---
 
 # Setup a raspberry pi with home assistant on docker

@@ -1,13 +1,10 @@
 ---
 description: A guide for using a raspberrypi as a smart thermometer
 date: 2020-04-12T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: raspberrypi thermometer smarthome
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: raspberrypi thermometer smarthome
 ---
 
 # Raspberry Pi Temperature

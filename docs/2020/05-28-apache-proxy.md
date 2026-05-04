@@ -1,13 +1,10 @@
 ---
 description: Example apache proxy config
 date: 2020-05-28T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: 2020 articles knowledgebase apache proxy
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: 2020 articles knowledgebase apache proxy
 ---
 
 # An example apache configuration for an HTML proxy

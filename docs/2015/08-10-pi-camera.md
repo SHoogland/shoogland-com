@@ -1,13 +1,10 @@
 ---
 description: Uploading pi camera images to aws
 date: 2015-08-10T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: raspberry pi camera aws s3 bucket
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: raspberry pi camera aws s3 bucket
 ---
 
 # Raspberry PI Camera

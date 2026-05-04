@@ -1,13 +1,10 @@
 ---
 description: Timmerdorp pi camera v2
 date: 2022-09-11T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: 2022 raspberry pi timmerdorp camera timelapse
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: 2022 raspberry pi timmerdorp camera timelapse
 ---
 
 # Timmerdorp PI Camera 2022

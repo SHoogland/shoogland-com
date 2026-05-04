@@ -22,7 +22,7 @@ jobs:
         run: |
           npm ci
           npm run dist
-          npx http-server -p 8080 docs/.vuepress/dist > /dev/null 2>&1 &
+          npx http-server -p 8080 docs/.vitepress/dist > /dev/null 2>&1 &
           ./node_modules/.bin/wait-on -v -t 10s http://127.0.0.1:8080
  
       - uses: cypress-io/github-action@v6
