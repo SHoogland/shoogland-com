@@ -12,7 +12,7 @@ head:
 A configuration file to set up a proxy in front of another webserver
 
 
-```apacheconf
+```apache
 <IfModule mod_ssl.c>
 <VirtualHost *:443>
 	ServerAdmin serveradmin@domain.com
