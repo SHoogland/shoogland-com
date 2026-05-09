@@ -26,9 +26,14 @@ export default defineConfig({
 	head: [
 		['link', { rel: 'icon', href: '/favicon.png' }],
 		['meta', { name: 'author', content: author.name }],
-		['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
-		['script', { 'data-collect-dnt': 'true', async: '', src: 'https://www.shoogland.com/proxy.js' }]
+		['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }]
 	],
+	transformHtml(code) {
+		return code.replace(
+			'</body>',
+			'<script data-collect-dnt="true" async src="https://www.shoogland.com/proxy.js"></script></body>'
+		)
+	},
 	themeConfig: {
 		lastUpdatedText: 'Last Updated',
 		socialLinks: [
