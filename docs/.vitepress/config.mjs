@@ -27,7 +27,7 @@ export default defineConfig({
 		['meta', { name: 'author', content: author.name }],
 		['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
 		['link', { rel: 'alternate', type: 'application/rss+xml', href: '/rss.xml', title: 'Stephan Hoogland RSS Feed' }],
-		['link', { rel: 'alternate', type: 'application/atom+xml', href: '/atom.xml', title: 'Stephan Hoogland Atom Feed' }],
+		['link', { rel: 'alternate', type: 'application/atom+xml', href: '/feed.atom', title: 'Stephan Hoogland Atom Feed' }],
 		['link', { rel: 'alternate', type: 'application/json', href: '/feed.json', title: 'Stephan Hoogland JSON Feed' }]
 	],
 	transformHtml(code) {
@@ -105,7 +105,7 @@ export default defineConfig({
 			})
 
 		writeFileSync(path.join(siteConfig.outDir, 'rss.xml'), feed.rss2())
-		writeFileSync(path.join(siteConfig.outDir, 'atom.xml'), feed.atom1())
+		writeFileSync(path.join(siteConfig.outDir, 'feed.atom'), feed.atom1())
 		writeFileSync(path.join(siteConfig.outDir, 'feed.json'), feed.json1())
 	}
 })
