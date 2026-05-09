@@ -14,7 +14,7 @@ Every year the last week of the summer holiday, there is this big event: [Timmer
 
 ## Prologue
 I think it started in 2015, we used to go from hut to hut on tuesday morning, to make a list of all the attendees, writing down their names and general location, so we had something to fall back to during an evacuation or some other incident (a parent at the gate).
-But pen and paper is old fashioned and [Sil van Diepen](sil.mt) and I thought this could be done better in some kind of app. So we build a small database, which linked the children to a color (timmerdorp is split into 4 districts with each its own color) and a hut number. And made a simple web app to register the kids instead of writing it all down. This had the great benefit that we could search! Now when a parent showed up and needed to take their child to a dentist appointment for example we knew exactly where to find him/her.
+But pen and paper is old fashioned and [Sil van Diepen](https://sil.mt) and I thought this could be done better in some kind of app. So we build a small database, which linked the children to a color (timmerdorp is split into 4 districts with each its own color) and a hut number. And made a simple web app to register the kids instead of writing it all down. This had the great benefit that we could search! Now when a parent showed up and needed to take their child to a dentist appointment for example we knew exactly where to find him/her.
 
 At some point in the following years we discussed replacing the physical ticket sale by a digital one, that way we would have all the details up front and only had to link the kids to a hutnr. This would also simplify the sale, no long queue way too early in the morning on the day of the ticketsale.
 

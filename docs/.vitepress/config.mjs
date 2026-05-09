@@ -15,7 +15,6 @@ export default defineConfig({
 	description: 'Professional Backend Developer',
 	cleanUrls: false,
 	lastUpdated: true,
-	ignoreDeadLinks: true,
 	rewrites: {
 		'README.md': 'index.md',
 		':year(\\d{4})/README.md': ':year/index.md'
