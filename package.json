@@ -4,7 +4,7 @@
 	"description": "Another blogging attempt",
 	"main": "index.js",
 	"engines": {
-		"node": "^18"
+		"node": "^24"
 	},
 	"scripts": {
 		"dev": "vitepress dev docs",
