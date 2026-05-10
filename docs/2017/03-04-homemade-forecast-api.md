@@ -1,13 +1,10 @@
 ---
 description: A homemade api to access forecastapp data
 date: 2017-03-04T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: forecastapp harvest api automation
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: forecastapp harvest api automation
 ---
 
 # Homemade forecast API

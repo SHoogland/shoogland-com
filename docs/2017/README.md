@@ -1,8 +1,9 @@
 ---
 description: A list of my 2017 articles
-meta:
-  - name: keywords
-    content: 2017 articles blogposts
+head:
+  - - meta
+    - name: keywords
+      content: 2017 articles blogposts
 ---
 
 # 2017

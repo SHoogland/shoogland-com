@@ -1,13 +1,10 @@
 ---
 description: Create a user in wordpress with php
 date: 2020-06-12T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: 2020 wordpress wp-admin wp-user functions.php php
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: 2020 wordpress wp-admin wp-user functions.php php
 ---
 
 # Create a user in WordPress with php

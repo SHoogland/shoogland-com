@@ -1,13 +1,10 @@
 ---
 description: Scriptable widget with gripp api
 date: 2022-06-13T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: 2022 iphone gripp api scriptable ios firebase
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: 2022 iphone gripp api scriptable ios firebase
 ---
 
 # Scriptable gripp widget

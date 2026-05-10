@@ -9,15 +9,15 @@
 	</picture>
 </template>
 
-<script>
-export default {
-	name: 'image-element',
-	data() {
-		return {
-			url: 'https://res.cloudinary.com/shoogland/image/upload/',
-			rootFolder: '/shoogland-com/'
-		}
-	},
-	props: ['source', 'width', 'height', 'type', 'alt']
-}
+<script setup>
+defineProps({
+	source: String,
+	width: [Number, String],
+	height: [Number, String],
+	type: String,
+	alt: String
+})
+
+const url = 'https://res.cloudinary.com/shoogland/image/upload/'
+const rootFolder = '/shoogland-com/'
 </script>

@@ -1,13 +1,10 @@
 ---
 description: Craft development in github codespaces
 date: 2021-11-09T12:00:00+0000
-
-meta:
-  - name: keywords
-    content: 2021 docker craftcms codespaces devcontainer cloud development
-
-feed:
-  enable: true
+head:
+  - - meta
+    - name: keywords
+      content: 2021 docker craftcms codespaces devcontainer cloud development
 ---
 
 # Craftcms development in the cloud

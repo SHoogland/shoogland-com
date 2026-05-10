@@ -1,8 +1,9 @@
 ---
 description: A list of my 2015 snippets
-meta:
-  - name: keywords
-    content: 2015 articles blogposts
+head:
+  - - meta
+    - name: keywords
+      content: 2015 articles blogposts
 ---
 
 # 2015

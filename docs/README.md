@@ -1,21 +1,26 @@
 ---
 description: A little bit about me and what I do
-meta:
-  - name: keywords
-    content: stephan hoogland about
-  - property: og:title
-    content: Stephan Hoogland
-  - property: og:type
-    content: article
-  - property: og:image
-    content: https://www.shoogland.com/img/me.png
-  - property: og:url
-    content: https://www.shoogland.com
+head:
+  - - meta
+    - name: keywords
+      content: stephan hoogland about
+  - - meta
+    - property: og:title
+      content: Stephan Hoogland
+  - - meta
+    - property: og:type
+      content: article
+  - - meta
+    - property: og:image
+      content: https://www.shoogland.com/img/me.png
+  - - meta
+    - property: og:url
+      content: https://www.shoogland.com
 ---
 
 # Stephan Hoogland
 
-That's me, a humble and epic backend developer, who can not seem to get interested in frontend code (CSS and everything that has to do with styling), hence the default vuepress theme site you are looking at right now.
+That's me, a humble and epic backend developer, who can not seem to get interested in frontend code (CSS and everything that has to do with styling), hence the default vitepress theme site you are looking at right now.
 
 This is my so called blog, I'm more and more writing down tech projects I try and was in need of a place to store and organize those documents.
 
