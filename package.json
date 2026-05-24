@@ -17,7 +17,7 @@
 		"gray-matter": "^4.0.3",
 		"vitepress": "^1.6.4",
 		"vue": "^3.5.34",
-		"wait-on": "^9.0.5"
+		"wait-on": "^9.0.10"
 	},
 	"devDependencies": {
 		"cypress": "^15.15.0"
