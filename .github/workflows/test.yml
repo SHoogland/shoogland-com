@@ -38,5 +38,5 @@ jobs:
       - uses: actions/upload-artifact@v7
         with:
           name: cypress-video
-          path: cypress/videos/home.cy.js.mp4
+          path: e2e/cypress/videos/home.cy.js.mp4
           archive: false
