@@ -1,12 +1,12 @@
 ---
-name: screenshots ci actions
+name: test with cypress
 on:
   push:
     branches:
       - main
 
 jobs:
-  screenshots:
+  cypress:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -39,13 +39,7 @@ jobs:
           working-directory: e2e
  
       - uses: actions/upload-artifact@v7
-        if: failure()
         with:
-          name: cypress-screenshots
-          path: cypress/screenshots
-
-      - uses: actions/upload-artifact@v7
-        if: always()
-        with:
-          name: cypress-videos
-          path: cypress/videos
+          name: cypress-video
+          path: cypress/videos/home.cy.js.mp4
+          archive: false
