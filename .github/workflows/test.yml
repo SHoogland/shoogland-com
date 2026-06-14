@@ -1,9 +1,6 @@
 ---
 name: test with cypress
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
   cypress:
