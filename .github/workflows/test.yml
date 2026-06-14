@@ -1,12 +1,9 @@
 ---
-name: screenshots ci actions
-on:
-  push:
-    branches:
-      - main
+name: test with cypress
+on: push
 
 jobs:
-  screenshots:
+  cypress:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,6 +13,8 @@ jobs:
         uses: actions/setup-node@v6.4.0
         with:
           node-version-file: '.nvmrc'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
 
       # run the ci equivalent of npm install
       - name: npm ci
@@ -24,16 +23,20 @@ jobs:
           npm run dist
           npx http-server -p 8080 docs/.vitepress/dist > /dev/null 2>&1 &
           ./node_modules/.bin/wait-on -v -t 10s http://127.0.0.1:8080
- 
-      - uses: cypress-io/github-action@v6
-      - uses: actions/upload-artifact@v7
-        if: failure()
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
 
-      - uses: actions/upload-artifact@v7
-        if: always()
+      - name: Install Node.js for cypress
+        uses: actions/setup-node@v6.4.0
         with:
-          name: cypress-videos
-          path: cypress/videos
+          node-version-file: 'e2e/.nvmrc'
+          cache: 'npm'
+          cache-dependency-path: e2e/package-lock.json
+
+      - uses: cypress-io/github-action@v6
+        with:
+          working-directory: e2e
+ 
+      - uses: actions/upload-artifact@v7
+        with:
+          name: cypress-video
+          path: e2e/cypress/videos/home.cy.js.mp4
+          archive: false

@@ -1,0 +1,16 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "home.cy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cypress": "^15.17.0"
+  },
+  "engines": {
+    "node": "^24"
+  }
+}
