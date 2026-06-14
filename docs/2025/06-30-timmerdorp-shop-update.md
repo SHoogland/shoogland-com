@@ -15,7 +15,7 @@ This is a follow up on the [timmerdorp ticket shop post](https://www.shoogland.c
 ## 2025
 Retry on kubernetes, some code improvements to prevent the issues from last year. I scaled up a little more aggresive than last year:
 - added 2 8vcpu nodes to the cluster and scaled to 12 pods (6 parse and 6 nuxt) distributed over the 3 nodes
-- added a dedicated redis (valkey) database
+- added a dedicated redis (valkey) database (Primary Node - Memory Optimized 64 GB / 8 vCPU / 145 GB Disk)
 - scaled up the database to m80 (hosted on atlas)
 
 This resulted in a more stable webshop, with no capacity related issues during the sale. 
