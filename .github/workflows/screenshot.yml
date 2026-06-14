@@ -16,6 +16,8 @@ jobs:
         uses: actions/setup-node@v6.4.0
         with:
           node-version-file: '.nvmrc'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
 
       # run the ci equivalent of npm install
       - name: npm ci
@@ -26,7 +28,7 @@ jobs:
           ./node_modules/.bin/wait-on -v -t 10s http://127.0.0.1:8080
 
       - name: Install Node.js for cypress
-        uses: actions/setup-node@v6.2.0
+        uses: actions/setup-node@v6.4.0
         with:
           node-version-file: 'e2e/.nvmrc'
           cache: 'npm'
