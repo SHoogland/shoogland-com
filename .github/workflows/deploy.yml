@@ -11,7 +11,9 @@ concurrency: production_environment
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v7
 
@@ -28,18 +30,26 @@ jobs:
           npm ci --only=production
           npm run dist
 
-      - name: Log in to ghcr.io with docker
-        run: echo ${{ secrets.PAT }} | docker login ghcr.io -u shoogland --password-stdin
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action
 
-      - name: Build docker image
-        run: |
-          docker build . --tag "ghcr.io/shoogland/shoogland-com:$GITHUB_SHA" --tag "ghcr.io/shoogland/shoogland-com:latest"
-
-      - name: Push to GitHub Packages with latest tag
-        run: docker push ghcr.io/shoogland/shoogland-com:latest
-
-      - name: Push to GitHub Packages with sha tag
-        run: docker push "ghcr.io/shoogland/shoogland-com:$GITHUB_SHA"
+      - name: Log in to ghcr.io
+        uses: docker/login-action
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Build and push docker image
+        uses: docker/build-push-action
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/shoogland/shoogland-com:latest
+            ghcr.io/shoogland/shoogland-com:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
