@@ -31,17 +31,17 @@ jobs:
           npm run dist
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action
+        uses: docker/setup-buildx-action@4.3.0
 
       - name: Log in to ghcr.io
-        uses: docker/login-action
+        uses: docker/login-action@4.6.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Build and push docker image
-        uses: docker/build-push-action
+        uses: docker/build-push-action@7.3.0
         with:
           context: .
           push: true
@@ -57,13 +57,20 @@ jobs:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 
       - name: get kubectl creds
-        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 sh-cluster-01
+        run: |
+          doctl kubernetes cluster kubeconfig save \
+            --expiry-seconds 600 sh-cluster-01
 
       - name: get shoost deployment
-        run: kubectl get deployment -n argocd www-shoogland -o yaml > deployment.yaml
+        run: |
+          kubectl get deployment -n argocd www-shoogland \
+            -o yaml > deployment.yaml
 
       - name: update image tag
-        run: sed "s|ghcr.io/shoogland/shoogland-com:.*|ghcr.io/shoogland/shoogland-com:${GITHUB_SHA}|" < deployment.yaml > deployment2.yaml
+        run: |
+          IMAGE="ghcr.io/shoogland/shoogland-com"
+          sed "s|${IMAGE}:.*|${IMAGE}:${GITHUB_SHA}|" \
+            < deployment.yaml > deployment2.yaml
 
       - name: apply updated image
         run: kubectl apply -f deployment2.yaml
