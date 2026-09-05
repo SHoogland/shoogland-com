@@ -1,0 +1,10 @@
+name: Renovate
+on:
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  renovate:
+    uses: shoogland/.github/.github/workflows/renovate.yml@main
+    secrets: inherit
