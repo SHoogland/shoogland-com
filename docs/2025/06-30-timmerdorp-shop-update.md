@@ -13,7 +13,7 @@ head:
 This is a follow up on the [timmerdorp ticket shop post](https://www.shoogland.com/2024/07-02-timmerdorp-ticket-shop.html), where I described the history of the yearly  ticket sale and the issues we had. This year I want to share some of the improvements we made and how the sale went.
 
 ## 2025
-Retry on kubernetes, some code improvements to prevent the issues from last year. I scaled up a little more aggresive than last year:
+Retry on kubernetes, some code improvements to prevent the issues from last year. I scaled up a little more aggressive than last year:
 - added 2 8vcpu nodes to the cluster and scaled to 12 pods (6 parse and 6 nuxt) distributed over the 3 nodes
 - added a dedicated redis (valkey) database (Primary Node - Memory Optimized 64 GB / 8 vCPU / 145 GB Disk)
 - scaled up the database to m80 (hosted on atlas)

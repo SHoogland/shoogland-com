@@ -8,10 +8,10 @@ head:
 ---
 
 # Automating your infrastructure with terraform
-With the start of this year I set out to finally figure out how to completely automate my infrastructure (sounds way better than my website). Managing droplets, ip addresses with dns, and certificates manually is only fun for the first few times, after that you want to automate it. That way you can repeat it as many times as you like with litteraly only a copy paste and a commit. At least, thats how I solved it with the following approach.
+With the start of this year I set out to finally figure out how to completely automate my infrastructure (sounds way better than my website). Managing droplets, ip addresses with dns, and certificates manually is only fun for the first few times, after that you want to automate it. That way you can repeat it as many times as you like with litteraly only a copy paste and a commit. At least, that's how I solved it with the following approach.
 
 ## The goal
-I want to be able to spin up a droplet on digital ocean, add its ip to a dns provider, select a docker image to serve as a website (or anything else you can run with docker for that matter), provision a certificate so it works with https, and as a bonus have my ssh key so I can quickly ssh into it. While we're at it configure a firewall so only port 443 is open and I don't have to worry wheter my redis or mysql instances are publicly accesible.
+I want to be able to spin up a droplet on digital ocean, add its ip to a dns provider, select a docker image to serve as a website (or anything else you can run with docker for that matter), provision a certificate so it works with https, and as a bonus have my ssh key so I can quickly ssh into it. While we're at it configure a firewall so only port 443 is open and I don't have to worry whether my redis or mysql instances are publicly accessible.
 
 ## Terraform
 Infrastructure as code, lovely concept, but for some reason just out of reach to work out of the box. Maybe people want to keep their production setups private or I haven't found the public ones yet. So there is room for more simple examples.
@@ -51,7 +51,7 @@ jobs:
         run: terraform apply -auto-approve
 ```
 
-To check what is going to happen before I merge to main, I have the following workflow on pull requests, and even setup branch protection to prevent me commiting straight to main.
+To check what is going to happen before I merge to main, I have the following workflow on pull requests, and even setup branch protection to prevent me committing straight to main.
 
 ```yaml
 name: Plan
@@ -274,6 +274,6 @@ write_files:
 
 Using my ghcr.io/shoogland/shoogland-com image as an example which exposes one port (80) as the website I want to run.
 
-Commit this to your repository, wait a little bit while the action runs, the droplet gets provisioned, dns records are created, traefik provisions a certificate, and your good to go. Thats how I run this website at the time of writing (cant promise I won't figure out something new a week or month later).
+Commit this to your repository, wait a little bit while the action runs, the droplet gets provisioned, dns records are created, traefik provisions a certificate, and your good to go. That's how I run this website at the time of writing (can't promise I won't figure out something new a week or month later).
 
 <disqus />

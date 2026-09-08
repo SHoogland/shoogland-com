@@ -41,7 +41,7 @@ Using postman and some trial and error I figured out that to submit user credent
 - Authenticity token
 - Session cookie
 
-The username and password are easy, thats something I know. The other 2 is where it gets interesting. If you do a GET request to https://id.getharvest.com/sessions/new it returns the following form:
+The username and password are easy, that's something I know. The other 2 is where it gets interesting. If you do a GET request to https://id.getharvest.com/sessions/new it returns the following form:
 
 ```html
 <form action="/sessions" accept-charset="UTF-8" method="post">
