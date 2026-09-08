@@ -253,7 +253,7 @@ To alter the codespace "devcontainer" you need a .devcontainer file, here we can
 ```
 
 ## Launching the codespace
-Whith those steps in place we can start our GitHub codespace. After launch we need a few steps to get it fully functional:
+With those steps in place we can start our GitHub codespace. After launch we need a few steps to get it fully functional:
 - You start with a clean clone so we first need the vendor folder: ```docker-compose run --rm composer composer install```
 - The database is empty as well, so lets fix that: ```docker-compose run --rm console php craft install/craft --email admin@craftcms.com --language en-GB --password password --site-name "Codespace demo" --site-url @siteUrl```
 - Now we are ready to go: ```docker-compose up -d craft console```

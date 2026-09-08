@@ -19,7 +19,7 @@ But pen and paper is old fashioned and [Sil van Diepen](https://sil.mt) and I th
 At some point in the following years we discussed replacing the physical ticket sale by a digital one, that way we would have all the details up front and only had to link the kids to a hutnr. This would also simplify the sale, no long queue way too early in the morning on the day of the ticketsale.
 
 ## Before 2017
-Up to and including timmerdorp heiloo 2016 we used to sell phisical tickets, there would be a huge line at 10:00 in the morning on some saturday. A lot of people would queue up hours before, just to get a great spot in line, so they can get their hands on these tickets.
+Up to and including timmerdorp heiloo 2016 we used to sell physical tickets, there would be a huge line at 10:00 in the morning on some saturday. A lot of people would queue up hours before, just to get a great spot in line, so they can get their hands on these tickets.
 
 ## 2017
 [Paydro](https://paydro.com/) expensive ticket shop solution, we paid almost 1200eu (1eu per ticket + payment method fee)
@@ -47,7 +47,7 @@ Again hosted on sashido. Some small improvements and a flawless sale, we started
 We moved away from Sashido to Digital Ocean kubernetes + mongodb atlas.
 
 Problems: 
-- the demand was rising, a lot of people tried to buy tickets at 10:00 am sharp. The shop couldn't handle this, some double payments and mismatched tickets to orders occured.
+- the demand was rising, a lot of people tried to buy tickets at 10:00 am sharp. The shop couldn't handle this, some double payments and mismatched tickets to orders occurred.
 
 ## 2024
 Retry on kubernetes, some code improvements to prevent the issues from last year. And I set up grafana log aggregation.
