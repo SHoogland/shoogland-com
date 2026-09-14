@@ -15,4 +15,4 @@ jobs:
       statuses: write
       issues: write
       checks: write
-      # vulnerability-alerts: read
+      vulnerability-alerts: read
