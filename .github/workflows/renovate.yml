@@ -8,12 +8,5 @@ on:
 jobs:
   renovate:
     uses: shoogland/.github/.github/workflows/renovate.yml@main
-    secrets: inherit
-    permissions:
-      contents: write
-      pull-requests: write
-      statuses: write
-      issues: write
-      checks: write
-      vulnerability-alerts: read
-      actions: write
+    secrets:
+      SH_UPDATER_APP_PRIVATE_KEY: ${{ secrets.SH_UPDATER_APP_PRIVATE_KEY }}
