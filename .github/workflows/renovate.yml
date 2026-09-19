@@ -16,3 +16,4 @@ jobs:
       issues: write
       checks: write
       vulnerability-alerts: read
+      actions: write
